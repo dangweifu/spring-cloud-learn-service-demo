@@ -12,8 +12,8 @@
 
     <groupId>org.wiulus.one</groupId>
     <artifactId>wiulus-cloud-parent</artifactId>
+    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
-
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -78,36 +78,36 @@
         <easyexcel.version>2.1.3</easyexcel.version>
 
         <!-- 系统内部 -->
-        <activity.version>0.0.1-SNAPSHOT</activity.version>
-        <after.sale.version>0.0.1-SNAPSHOT</after.sale.version>
-        <base.upload.version>0.0.1-SNAPSHOT</base.upload.version>
-        <base.mq.version>0.0.1-SNAPSHOT</base.mq.version>
-        <base.message.version>0.0.1-SNAPSHOT</base.message.version>
-        <cart.version>0.0.1-SNAPSHOT</cart.version>
-        <leiming.elasticsearch.version>0.0.1-SNAPSHOT</leiming.elasticsearch.version>
-        <goods.version>0.0.1-SNAPSHOT</goods.version>
-        <index.sync.version>0.0.1-SNAPSHOT</index.sync.version>
-        <logistics.version>0.0.1-SNAPSHOT</logistics.version>
-        <leimingtech.log.version>0.0.1-SNAPSHOT</leimingtech.log.version>
-        <member.version>0.0.1-SNAPSHOT</member.version>
-        <nosql.version>0.0.1-SNAPSHOT</nosql.version>
-        <operation.version>0.0.1-SNAPSHOT</operation.version>
-        <order.version>0.0.1-SNAPSHOT</order.version>
-        <payment.version>0.0.1-SNAPSHOT</payment.version>
-        <statis.version>0.0.1-SNAPSHOT</statis.version>
-        <settle.version>0.0.1-SNAPSHOT</settle.version>
-        <store.version>0.0.1-SNAPSHOT</store.version>
-        <sys.version>0.0.1-SNAPSHOT</sys.version>
-        <third.party.version>0.0.1-SNAPSHOT</third.party.version>
-        <admin.auth.version>0.0.1-SNAPSHOT</admin.auth.version>
-        <front.auth.version>0.0.1-SNAPSHOT</front.auth.version>
-        <sys.version>0.0.1-SNAPSHOT</sys.version>
-        <leimingtech.mongodb.version>0.0.1-SNAPSHOT</leimingtech.mongodb.version>
-        <commons.datasource.version>0.0.1-SNAPSHOT</commons.datasource.version>
-        <commons.mybatis.version>0.0.1-SNAPSHOT</commons.mybatis.version>
-        <commons.tools.version>0.0.1-SNAPSHOT</commons.tools.version>
-        <commons.core.version>0.0.1-SNAPSHOT</commons.core.version>
-        <commons.core.version>0.0.1-SNAPSHOT</commons.core.version>
+        <activity.version>1.0-SNAPSHOT</activity.version>
+        <after.sale.version>1.0-SNAPSHOT</after.sale.version>
+        <base.upload.version>1.0-SNAPSHOT</base.upload.version>
+        <base.mq.version>1.0-SNAPSHOT</base.mq.version>
+        <base.message.version>1.0-SNAPSHOT</base.message.version>
+        <cart.version>1.0-SNAPSHOT</cart.version>
+        <leiming.elasticsearch.version>1.0-SNAPSHOT</leiming.elasticsearch.version>
+        <goods.version>1.0-SNAPSHOT</goods.version>
+        <index.sync.version>1.0-SNAPSHOT</index.sync.version>
+        <logistics.version>1.0-SNAPSHOT</logistics.version>
+        <leimingtech.log.version>1.0-SNAPSHOT</leimingtech.log.version>
+        <member.version>1.0-SNAPSHOT</member.version>
+        <nosql.version>1.0-SNAPSHOT</nosql.version>
+        <operation.version>1.0-SNAPSHOT</operation.version>
+        <order.version>1.0-SNAPSHOT</order.version>
+        <payment.version>1.0-SNAPSHOT</payment.version>
+        <statis.version>1.0-SNAPSHOT</statis.version>
+        <settle.version>1.0-SNAPSHOT</settle.version>
+        <store.version>1.0-SNAPSHOT</store.version>
+        <sys.version>1.0-SNAPSHOT</sys.version>
+        <third.party.version>1.0-SNAPSHOT</third.party.version>
+        <admin.auth.version>1.0-SNAPSHOT</admin.auth.version>
+        <front.auth.version>1.0-SNAPSHOT</front.auth.version>
+        <sys.version>1.0-SNAPSHOT</sys.version>
+        <leimingtech.mongodb.version>1.0-SNAPSHOT</leimingtech.mongodb.version>
+        <commons.datasource.version>1.0-SNAPSHOT</commons.datasource.version>
+        <commons.mybatis.version>1.0-SNAPSHOT</commons.mybatis.version>
+        <commons.tools.version>1.0-SNAPSHOT</commons.tools.version>
+        <commons.core.version>1.0-SNAPSHOT</commons.core.version>
+        <commons.core.version>1.0-SNAPSHOT</commons.core.version>
 
         <checkstyle.config.location>check-style.xml</checkstyle.config.location>
         <snapshots.repo>http://192.168.1.108:18081/nexus/repository/maven-snapshots</snapshots.repo>
@@ -135,186 +135,186 @@
 
             <!-- 活动模块 -->
 <!--            <dependency>-->
-<!--                <groupId>com.leimingtech</groupId>-->
-<!--                <artifactId>leimingtech-activity-client</artifactId>-->
+<!--                <groupId>org.wiulus.one</groupId>-->
+<!--                <artifactId>wiulus-cloud-activity-client</artifactId>-->
 <!--                <version>${activity.version}</version>-->
 <!--            </dependency>-->
 
             <!-- 售后模块 -->
 <!--            <dependency>-->
-<!--                <groupId>com.leimingtech</groupId>-->
-<!--                <artifactId>leimingtech-after-sale-client</artifactId>-->
+<!--                <groupId>org.wiulus.one</groupId>-->
+<!--                <artifactId>wiulus-cloud-after-sale-client</artifactId>-->
 <!--                <version>${after.sale.version}</version>-->
 <!--            </dependency>-->
 
             <!-- 基础服务 -->
 <!--            <dependency>-->
-<!--                <groupId>com.leimingtech</groupId>-->
-<!--                <artifactId>leimingtech-upload-client</artifactId>-->
+<!--                <groupId>org.wiulus.one</groupId>-->
+<!--                <artifactId>wiulus-cloud-upload-client</artifactId>-->
 <!--                <version>${base.upload.version}</version>-->
 <!--            </dependency>-->
 
 <!--            <dependency>-->
-<!--                <groupId>com.leimingtech</groupId>-->
-<!--                <artifactId>leimingtech-mq-client</artifactId>-->
+<!--                <groupId>org.wiulus.one</groupId>-->
+<!--                <artifactId>wiulus-cloud-mq-client</artifactId>-->
 <!--                <version>${base.mq.version}</version>-->
 <!--            </dependency>-->
 
 <!--            <dependency>-->
-<!--                <groupId>com.leimingtech</groupId>-->
-<!--                <artifactId>leimingtech-message-client</artifactId>-->
+<!--                <groupId>org.wiulus.one</groupId>-->
+<!--                <artifactId>wiulus-cloud-message-client</artifactId>-->
 <!--                <version>${base.message.version}</version>-->
 <!--            </dependency>-->
 
 <!--            <dependency>-->
-<!--                <groupId>com.leimingtech</groupId>-->
-<!--                <artifactId>leimingtech-mongodb</artifactId>-->
+<!--                <groupId>org.wiulus.one</groupId>-->
+<!--                <artifactId>wiulus-cloud-mongodb</artifactId>-->
 <!--                <version>${leimingtech.mongodb.version}</version>-->
 <!--            </dependency>-->
 
             <!-- 购物车模块 -->
 <!--            <dependency>-->
-<!--                <groupId>com.leimingtech</groupId>-->
-<!--                <artifactId>leimingtech-cart-client</artifactId>-->
+<!--                <groupId>org.wiulus.one</groupId>-->
+<!--                <artifactId>wiulus-cloud-cart-client</artifactId>-->
 <!--                <version>${cart.version}</version>-->
 <!--            </dependency>-->
 
             <!-- elasticsearch工具类模块 -->
 <!--            <dependency>-->
-<!--                <groupId>com.leimingtech</groupId>-->
-<!--                <artifactId>leimingtech-elasticsearch</artifactId>-->
+<!--                <groupId>org.wiulus.one</groupId>-->
+<!--                <artifactId>wiulus-cloud-elasticsearch</artifactId>-->
 <!--                <version>${leiming.elasticsearch.version}</version>-->
 <!--            </dependency>-->
 
 <!--            &lt;!&ndash; 商品模块 &ndash;&gt;-->
 <!--            <dependency>-->
-<!--                <groupId>com.leimingtech</groupId>-->
-<!--                <artifactId>leimingtech-goods-client</artifactId>-->
+<!--                <groupId>org.wiulus.one</groupId>-->
+<!--                <artifactId>wiulus-cloud-goods-client</artifactId>-->
 <!--                <version>${goods.version}</version>-->
 <!--            </dependency>-->
 <!--            &lt;!&ndash;结算模块&ndash;&gt;-->
 <!--            <dependency>-->
-<!--                <groupId>com.leimingtech</groupId>-->
-<!--                <artifactId>leimingtech-settle-client</artifactId>-->
+<!--                <groupId>org.wiulus.one</groupId>-->
+<!--                <artifactId>wiulus-cloud-settle-client</artifactId>-->
 <!--                <version>${settle.version}</version>-->
 <!--            </dependency>-->
 
 <!--            &lt;!&ndash;索引模块 &ndash;&gt;-->
 <!--            <dependency>-->
-<!--                <groupId>com.leimingtech</groupId>-->
-<!--                <artifactId>leimingtech-index-sync</artifactId>-->
+<!--                <groupId>org.wiulus.one</groupId>-->
+<!--                <artifactId>wiulus-cloud-index-sync</artifactId>-->
 <!--                <version>${index.sync.version}</version>-->
 <!--            </dependency>-->
 
 <!--            &lt;!&ndash; 物流模块 &ndash;&gt;-->
 <!--            <dependency>-->
-<!--                <groupId>com.leimingtech</groupId>-->
-<!--                <artifactId>leimingtech-logistics-client</artifactId>-->
+<!--                <groupId>org.wiulus.one</groupId>-->
+<!--                <artifactId>wiulus-cloud-logistics-client</artifactId>-->
 <!--                <version>${logistics.version}</version>-->
 <!--            </dependency>-->
 
 <!--            &lt;!&ndash; 日志模块 &ndash;&gt;-->
 <!--            <dependency>-->
-<!--                <groupId>com.leimingtech</groupId>-->
-<!--                <artifactId>leimingtech-logs</artifactId>-->
+<!--                <groupId>org.wiulus.one</groupId>-->
+<!--                <artifactId>wiulus-cloud-logs</artifactId>-->
 <!--                <version>${leimingtech.log.version}</version>-->
 <!--            </dependency>-->
 
 <!--            &lt;!&ndash; 用户模块 &ndash;&gt;-->
 <!--            <dependency>-->
-<!--                <groupId>com.leimingtech</groupId>-->
-<!--                <artifactId>leimingtech-member-client</artifactId>-->
+<!--                <groupId>org.wiulus.one</groupId>-->
+<!--                <artifactId>wiulus-cloud-member-client</artifactId>-->
 <!--                <version>${member.version}</version>-->
 <!--            </dependency>-->
 
 <!--            &lt;!&ndash; NoSQL模块 &ndash;&gt;-->
 <!--            <dependency>-->
-<!--                <groupId>com.leimingtech</groupId>-->
-<!--                <artifactId>leimingtech-nosql</artifactId>-->
+<!--                <groupId>org.wiulus.one</groupId>-->
+<!--                <artifactId>wiulus-cloud-nosql</artifactId>-->
 <!--                <version>${nosql.version}</version>-->
 <!--            </dependency>-->
 
 <!--            &lt;!&ndash; 操作模块 &ndash;&gt;-->
 <!--            <dependency>-->
-<!--                <groupId>com.leimingtech</groupId>-->
-<!--                <artifactId>leimingtech-operation-client</artifactId>-->
+<!--                <groupId>org.wiulus.one</groupId>-->
+<!--                <artifactId>wiulus-cloud-operation-client</artifactId>-->
 <!--                <version>${operation.version}</version>-->
 <!--            </dependency>-->
 
 <!--            &lt;!&ndash; 订单模块 &ndash;&gt;-->
 <!--            <dependency>-->
-<!--                <groupId>com.leimingtech</groupId>-->
-<!--                <artifactId>leimingtech-order-client</artifactId>-->
+<!--                <groupId>org.wiulus.one</groupId>-->
+<!--                <artifactId>wiulus-cloud-order-client</artifactId>-->
 <!--                <version>${order.version}</version>-->
 <!--            </dependency>-->
 
 <!--            &lt;!&ndash; 支付模块 &ndash;&gt;-->
 <!--            <dependency>-->
-<!--                <groupId>com.leimingtech</groupId>-->
-<!--                <artifactId>leimingtech-payment-client</artifactId>-->
+<!--                <groupId>org.wiulus.one</groupId>-->
+<!--                <artifactId>wiulus-cloud-payment-client</artifactId>-->
 <!--                <version>${payment.version}</version>-->
 <!--            </dependency>-->
 
 <!--            &lt;!&ndash; 统计模块 &ndash;&gt;-->
 <!--            <dependency>-->
-<!--                <groupId>com.leimingtech</groupId>-->
-<!--                <artifactId>leimingtech-statis-client</artifactId>-->
+<!--                <groupId>org.wiulus.one</groupId>-->
+<!--                <artifactId>wiulus-cloud-statis-client</artifactId>-->
 <!--                <version>${statis.version}</version>-->
 <!--            </dependency>-->
 
 <!--            &lt;!&ndash; 店铺模块 &ndash;&gt;-->
 <!--            <dependency>-->
-<!--                <groupId>com.leimingtech</groupId>-->
-<!--                <artifactId>leimingtech-store-client</artifactId>-->
+<!--                <groupId>org.wiulus.one</groupId>-->
+<!--                <artifactId>wiulus-cloud-store-client</artifactId>-->
 <!--                <version>${store.version}</version>-->
 <!--            </dependency>-->
 
 <!--            &lt;!&ndash; 系统模块 &ndash;&gt;-->
 <!--            <dependency>-->
-<!--                <groupId>com.leimingtech</groupId>-->
-<!--                <artifactId>leimingtech-sys-client</artifactId>-->
+<!--                <groupId>org.wiulus.one</groupId>-->
+<!--                <artifactId>wiulus-cloud-sys-client</artifactId>-->
 <!--                <version>${sys.version}</version>-->
 <!--            </dependency>-->
 
 <!--            &lt;!&ndash; 第三方模块 &ndash;&gt;-->
 <!--            <dependency>-->
-<!--                <groupId>com.leimingtech</groupId>-->
-<!--                <artifactId>leimingtech-third-party-client</artifactId>-->
+<!--                <groupId>org.wiulus.one</groupId>-->
+<!--                <artifactId>wiulus-cloud-third-party-client</artifactId>-->
 <!--                <version>${third.party.version}</version>-->
 <!--            </dependency>-->
 
 <!--            <dependency>-->
-<!--                <groupId>com.leimingtech</groupId>-->
-<!--                <artifactId>leimingtech-auth</artifactId>-->
+<!--                <groupId>org.wiulus.one</groupId>-->
+<!--                <artifactId>wiulus-cloud-auth</artifactId>-->
 <!--                <version>${admin.auth.version}</version>-->
 <!--            </dependency>-->
 
-<!--            <dependency>-->
-<!--                <groupId>com.leimingtech</groupId>-->
-<!--                <artifactId>leimingtech-commons-dynamic-datasource</artifactId>-->
-<!--                <version>${commons.datasource.version}</version>-->
-<!--            </dependency>-->
+            <dependency>
+                <groupId>org.wiulus.one</groupId>
+                <artifactId>wiulus-cloud-dynamic-datasource</artifactId>
+                <version>${commons.datasource.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.wiulus.one</groupId>
+                <artifactId>wiulus-cloud-mybatis</artifactId>
+                <version>${commons.mybatis.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.wiulus.one</groupId>
+                <artifactId>wiulus-cloud-tools</artifactId>
+                <version>${commons.tools.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.wiulus.one</groupId>
+                <artifactId>wiulus-cloud-core</artifactId>
+                <version>${commons.core.version}</version>
+            </dependency>
 
 <!--            <dependency>-->
-<!--                <groupId>com.leimingtech</groupId>-->
-<!--                <artifactId>leimingtech-commons-mybatis</artifactId>-->
-<!--                <version>${commons.mybatis.version}</version>-->
-<!--            </dependency>-->
-
-<!--            <dependency>-->
-<!--                <groupId>com.leimingtech</groupId>-->
-<!--                <artifactId>leimingtech-commons-tools</artifactId>-->
-<!--                <version>${commons.tools.version}</version>-->
-<!--            </dependency>-->
-<!--            <dependency>-->
-<!--                <groupId>com.leimingtech</groupId>-->
-<!--                <artifactId>leimingtech-commons-core</artifactId>-->
-<!--                <version>${commons.core.version}</version>-->
-<!--            </dependency>-->
-
-<!--            <dependency>-->
-<!--                <groupId>com.leimingtech.front</groupId>-->
-<!--                <artifactId>leimingtech-auth-client</artifactId>-->
+<!--                <groupId>org.wiulus.one.front</groupId>-->
+<!--                <artifactId>wiulus-cloud-auth-client</artifactId>-->
 <!--                <version>${front.auth.version}</version>-->
 <!--            </dependency>-->
 
@@ -646,54 +646,54 @@
         </snapshotRepository>
     </distributionManagement>
 
-    <repositories>
-        <repository>
-            <id>aliyun-nexus</id>
-            <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </repository>
+<!--    <repositories>-->
+<!--        <repository>-->
+<!--            <id>aliyun-nexus</id>-->
+<!--            <url>http://maven.aliyun.com/nexus/content/groups/public/</url>-->
+<!--            <releases>-->
+<!--                <enabled>true</enabled>-->
+<!--            </releases>-->
+<!--            <snapshots>-->
+<!--                <enabled>false</enabled>-->
+<!--            </snapshots>-->
+<!--        </repository>-->
 
-        <!-- 外网私服配置 -->
-        <repository>
-            <id>extranet-nexus</id>
-            <url>http://62.234.0.169:18081/nexus/repository/maven-public/</url>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </repository>
+<!--        &lt;!&ndash; 外网私服配置 &ndash;&gt;-->
+<!--        <repository>-->
+<!--            <id>extranet-nexus</id>-->
+<!--            <url>http://62.234.0.169:18081/nexus/repository/maven-public/</url>-->
+<!--            <releases>-->
+<!--                <enabled>true</enabled>-->
+<!--            </releases>-->
+<!--            <snapshots>-->
+<!--                <enabled>false</enabled>-->
+<!--            </snapshots>-->
+<!--        </repository>-->
 
-        <!-- 天津内网私服配置 -->
-        <repository>
-            <id>intranet-nexus</id>
-            <url>http://192.168.1.108:18081/nexus/repository/maven-public/</url>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </repository>
+<!--        &lt;!&ndash; 天津内网私服配置 &ndash;&gt;-->
+<!--        <repository>-->
+<!--            <id>intranet-nexus</id>-->
+<!--            <url>http://192.168.1.108:18081/nexus/repository/maven-public/</url>-->
+<!--            <releases>-->
+<!--                <enabled>true</enabled>-->
+<!--            </releases>-->
+<!--            <snapshots>-->
+<!--                <enabled>false</enabled>-->
+<!--            </snapshots>-->
+<!--        </repository>-->
 
-        <!-- add the elasticsearch repo -->
-        <repository>
-            <id>elasticsearch-releases</id>
-            <url>https://artifacts.elastic.co/maven</url>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </repository>
-    </repositories>
+<!--        &lt;!&ndash; add the elasticsearch repo &ndash;&gt;-->
+<!--        <repository>-->
+<!--            <id>elasticsearch-releases</id>-->
+<!--            <url>https://artifacts.elastic.co/maven</url>-->
+<!--            <releases>-->
+<!--                <enabled>true</enabled>-->
+<!--            </releases>-->
+<!--            <snapshots>-->
+<!--                <enabled>false</enabled>-->
+<!--            </snapshots>-->
+<!--        </repository>-->
+<!--    </repositories>-->
 
     <pluginRepositories>
         <pluginRepository>
@@ -769,7 +769,7 @@
                     <artifactId>docker-maven-plugin</artifactId>
                     <version>${docker.plugin.version}</version>
                     <configuration>
-                        <imageName>leimingtech-cloud/${project.artifactId}</imageName>
+                        <imageName>wiulus-cloud-cloud/${project.artifactId}</imageName>
                         <dockerHost>http://192.168.1.240:2375</dockerHost>
                         <dockerDirectory>${project.basedir}/</dockerDirectory>
                         <forceTags>true</forceTags>

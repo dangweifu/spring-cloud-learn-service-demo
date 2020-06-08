@@ -10,11 +10,14 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>wiulus-cloud-member</artifactId>
+    <artifactId>wiulus-cloud-commons</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>wiulus-cloud-member-client</module>
-        <module>wiulus-cloud-member-server</module>
+        <module>wiulus-cloud-core</module>
+        <module>wiulus-cloud-logs</module>
+        <module>wiulus-cloud-tools</module>
+        <module>wiulus-cloud-mybatis</module>
+        <module>wiulus-cloud-dynamic-datasource</module>
     </modules>
 
 
