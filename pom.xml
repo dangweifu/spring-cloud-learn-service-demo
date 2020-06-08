@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.0.7.RELEASE</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.wiulus.one</groupId>
+    <artifactId>spring-cloud-learn-service-demo</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>wiulus-cloud-parent</module>
+        <module>wiulus-cloud-member</module>
+        <module>wiulus-cloud-base-service</module>
+    </modules>
+
+    <properties>
+        <java.version>1.8</java.version>
+        <spring.cloud.version>Finchley.SR2</spring.cloud.version>
+        <spring.boot.version>2.0.7.RELEASE</spring.boot.version>
+        <feign.form.version>3.3.0</feign.form.version>
+        <maven.surefire.version>2.21.0</maven.surefire.version>
+        <maven.checkstyle.version>2.17</maven.checkstyle.version>
+        <apollo.client.version>1.1.0</apollo.client.version>
+        <easypoi.version>3.1.0</easypoi.version>
+        <wxpay.version>3.0.9</wxpay.version>
+        <xxl.version>2.0.2</xxl.version>
+        <docker.plugin.version>1.1.1</docker.plugin.version>
+        <elasticsearch.version>7.4.0</elasticsearch.version>
+        <commons.lang.version>3.7</commons.lang.version>
+        <fastjson.version>1.2.60</fastjson.version>
+        <lombok.version>1.18.4</lombok.version>
+        <spring-data-mongodb.version>2.0.7.RELEASE</spring-data-mongodb.version>
+        <jjwt.version>0.7.0</jjwt.version>
+        <kaptcha.version>0.0.9</kaptcha.version>
+        <gson.version>2.8.5</gson.version>
+        <spring.security.version>5.1.1.RELEASE</spring.security.version>
+        <mysql.version>5.1.38</mysql.version>
+        <druid.version>1.1.10</druid.version>
+        <sqlserver.version>4.0</sqlserver.version>
+        <spring.boot.mybatis.version>1.2.0</spring.boot.mybatis.version>
+        <aliyun.core.version>3.2.2</aliyun.core.version>
+        <aliyun.dysmsapi.version>1.1.0</aliyun.dysmsapi.version>
+        <qcloud.qcloudsms.version>1.0.5</qcloud.qcloudsms.version>
+        <freemarker.version>2.3.28</freemarker.version>
+        <qiniu.version>[7.2.0, 7.2.99]</qiniu.version>
+        <aliyun.oss.version>2.8.3</aliyun.oss.version>
+        <aliyun.core.version>3.2.2</aliyun.core.version>
+        <qcloud.cos.version>5.4.4</qcloud.cos.version>
+        <fastdfs.version>1.26.2</fastdfs.version>
+        <hibernate.validator.version>6.0.12.Final</hibernate.validator.version>
+        <jsoup.version>1.11.3</jsoup.version>
+        <commons.fileupload.version>1.3.3</commons.fileupload.version>
+        <commons.io.version>2.6</commons.io.version>
+        <joda.time.version>2.9.9</joda.time.version>
+        <mybatisplus.version>3.3.0</mybatisplus.version>
+        <pinyin.version>2.5.0</pinyin.version>
+        <servlet.api.version>2.5</servlet.api.version>
+        <user.agent.version>1.21</user.agent.version>
+        <spring.boot.mongo.version>1.5.18.RELEASE</spring.boot.mongo.version>
+        <alipay.version>4.5.0.ALL</alipay.version>
+        <oracle.version>11.2.0.3</oracle.version>
+        <p6spy.version>3.8.2</p6spy.version>
+        <easyexcel.version>2.1.3</easyexcel.version>
+        <spring.boot.admin.version>2.0.3</spring.boot.admin.version>
+        <bcprov.version>1.60</bcprov.version>
+        <hutool.version>4.5.10</hutool.version>
+        <jasypt.version>3.0.2</jasypt.version>
+        <checkstyle.config.location>check-style.xml</checkstyle.config.location>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <!--
+        只是声明依赖，并不实现引入，因此子项目需要显示的声明需要用的依赖。
+        如果不在子项目中声明依赖，是不会从父项目中继承下来的；
+        只有在子项目中写了该依赖项，并且没有指定具体版本，才会从父项目中继承该项，并且version和scope都读取自父pom;
+        另外如果子项目中指定了版本号，那么会使用子项目中指定的jar版本。
+        直接依赖优先级高于传递依赖优先级
+   -->
+
+    <dependencyManagement>
+        <dependencies>
+            <!-- 活动模块 -->
+
+            <!-- 售后模块 -->
+
+            <!-- 基础服务 -->
+
+            <!-- MQ服务 -->
+
+            <!-- mongodb服务 -->
+
+            <!-- 购物车模块 -->
+
+            <!-- elasticsearch工具类模块 -->
+
+            <!-- 商品模块 -->
+
+            <!-- 结算模块 -->
+
+            <!-- 索引模块 -->
+
+            <!-- 物流模块 -->
+
+            <!-- 日志模块 -->
+
+            <!-- 用户模块 -->
+
+            <!-- NoSQL模块 -->
+
+            <!-- 操作模块 -->
+
+            <!-- 订单模块 -->
+
+            <!-- 支付模块 -->
+
+            <!-- 统计模块 -->
+
+            <!-- 店铺模块 -->
+
+            <!-- 系统模块 -->
+
+            <!-- 第三方模块 -->
+
+            <!-- flyway数据库版本控制 -->
+
+            <!-- 消息总线 -->
+
+            <!-- 处理feign文件上传 -->
+
+            <!-- apollo -->
+
+            <!-- 微信支付依赖架包 -->
+            <dependency>
+                <groupId>com.github.wxpay</groupId>
+                <artifactId>wxpay-sdk</artifactId>
+                <version>${wxpay.version}</version>
+            </dependency>
+            <!-- RSA加密 -->
+            <dependency>
+                <groupId>org.bouncycastle</groupId>
+                <artifactId>bcprov-jdk15on</artifactId>
+                <version>${bcprov.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-all</artifactId>
+                <version>${hutool.version}</version>
+            </dependency>
+
+            <!-- jasypt 配置文件加密 -->
+            <dependency>
+                <groupId>com.github.ulisesbocchio</groupId>
+                <artifactId>jasypt-spring-boot-starter</artifactId>
+                <version>${jasypt.version}</version>
+            </dependency>
+
+            <!-- elasticsearch -->
+            <dependency>
+                <groupId>org.elasticsearch</groupId>
+                <artifactId>elasticsearch</artifactId>
+                <version>${elasticsearch.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.elasticsearch.client</groupId>
+                <artifactId>elasticsearch-rest-high-level-client</artifactId>
+                <version>${elasticsearch.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.elasticsearch.client</groupId>
+                <artifactId>elasticsearch-rest-client</artifactId>
+                <version>${elasticsearch.version}</version>
+            </dependency>
+
+            <!-- commons工具包 -->
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${commons.lang.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-collections4</artifactId>
+                <version>4.1</version>
+            </dependency>
+
+
+            <!-- fastjson工具包 -->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${fastjson.version}</version>
+            </dependency>
+
+            <!-- lombok工具包 -->
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+            </dependency>
+
+            <!-- SpringBootAdmin -->
+            <dependency>
+                <groupId>de.codecentric</groupId>
+                <artifactId>spring-boot-admin-starter-client</artifactId>
+                <version>${spring.boot.admin.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>de.codecentric</groupId>
+                <artifactId>spring-boot-admin-starter-server</artifactId>
+                <version>${spring.boot.admin.version}</version>
+            </dependency>
+            <!-- 验证码 -->
+            <dependency>
+                <groupId>com.github.axet</groupId>
+                <artifactId>kaptcha</artifactId>
+                <version>${kaptcha.version}</version>
+            </dependency>
+
+            <!-- JWT -->
+            <dependency>
+                <groupId>io.jsonwebtoken</groupId>
+                <artifactId>jjwt</artifactId>
+                <version>${jjwt.version}</version>
+            </dependency>
+            <!-- gson -->
+            <dependency>
+                <groupId>com.google.code.gson</groupId>
+                <artifactId>gson</artifactId>
+                <version>${gson.version}</version>
+            </dependency>
+
+            <!-- springsecurity -->
+            <dependency>
+                <groupId>org.springframework.security</groupId>
+                <artifactId>spring-security-core</artifactId>
+                <version>${spring.security.version}</version>
+            </dependency>
+
+            <!-- alibaba druid -->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid-spring-boot-starter</artifactId>
+                <version>${druid.version}</version>
+            </dependency>
+
+            <!--mysql驱动-->
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql.version}</version>
+            </dependency>
+            <!--oracle驱动-->
+            <dependency>
+                <groupId>com.oracle</groupId>
+                <artifactId>ojdbc6</artifactId>
+                <version>${oracle.version}</version>
+            </dependency>
+
+            <!-- spring boot mybatis -->
+            <dependency>
+                <groupId>org.mybatis.spring.boot</groupId>
+                <artifactId>mybatis-spring-boot-starter</artifactId>
+                <version>${spring.boot.mybatis.version}</version>
+            </dependency>
+
+            <!-- 阿里云短信 -->
+            <dependency>
+                <groupId>com.aliyun</groupId>
+                <artifactId>aliyun-java-sdk-core</artifactId>
+                <version>${aliyun.core.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.aliyun</groupId>
+                <artifactId>aliyun-java-sdk-dysmsapi</artifactId>
+                <version>${aliyun.dysmsapi.version}</version>
+            </dependency>
+
+            <!-- 腾讯云短信 -->
+            <dependency>
+                <groupId>com.github.qcloudsms</groupId>
+                <artifactId>qcloudsms</artifactId>
+                <version>${qcloud.qcloudsms.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.freemarker</groupId>
+                <artifactId>freemarker</artifactId>
+                <version>${freemarker.version}</version>
+            </dependency>
+
+            <!-- aliyun OSS SDK -->
+            <dependency>
+                <groupId>com.aliyun.oss</groupId>
+                <artifactId>aliyun-sdk-oss</artifactId>
+                <version>${aliyun.oss.version}</version>
+            </dependency>
+
+            <!-- 腾讯云 OSS SDK -->
+            <dependency>
+                <groupId>com.qcloud</groupId>
+                <artifactId>cos_api</artifactId>
+                <version>${qcloud.cos.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j-log4j12</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+
+            <!-- FastDFS -->
+            <dependency>
+                <groupId>com.github.tobato</groupId>
+                <artifactId>fastdfs-client</artifactId>
+                <version>${fastdfs.version}</version>
+            </dependency>
+
+            <!-- hibernate-validator -->
+            <dependency>
+                <groupId>org.hibernate</groupId>
+                <artifactId>hibernate-validator</artifactId>
+                <version>${hibernate.validator.version}</version>
+            </dependency>
+
+            <!--汉语转拼音-->
+            <dependency>
+                <groupId>com.belerweb</groupId>
+                <artifactId>pinyin4j</artifactId>
+                <version>${pinyin.version}</version>
+            </dependency>
+
+            <!-- mongodb -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-data-mongodb</artifactId>
+                <version>${spring.boot.mongo.version}</version>
+            </dependency>
+
+            <!-- 支付宝支付SDK -->
+            <dependency>
+                <groupId>com.alipay.sdk</groupId>
+                <artifactId>alipay-sdk-java</artifactId>
+                <version>${alipay.version}</version>
+            </dependency>
+
+            <!-- mongdb -->
+            <dependency>
+                <groupId>org.springframework.data</groupId>
+                <artifactId>spring-data-mongodb</artifactId>
+                <version>${spring-data-mongodb.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>p6spy</groupId>
+                <artifactId>p6spy</artifactId>
+                <version>${p6spy.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+<!--    <distributionManagement>-->
+<!--        <repository>-->
+<!--            <id>releases</id>-->
+<!--            <url>${releases.repo}</url>-->
+<!--        </repository>-->
+<!--        <snapshotRepository>-->
+<!--            <id>snapshots</id>-->
+<!--            <url>${snapshots.repo}</url>-->
+<!--        </snapshotRepository>-->
+<!--    </distributionManagement>-->
+
+
+    <profiles>
+        <profile>
+            <id>dev</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <active>dev</active>
+            </properties>
+            <!-- 开发环境使用p6spy打印SQL -->
+            <dependencies>
+                <dependency>
+                    <groupId>p6spy</groupId>
+                    <artifactId>p6spy</artifactId>
+                </dependency>
+            </dependencies>
+        </profile>
+
+        <profile>
+            <id>test</id>
+            <properties>
+                <active>test</active>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>prod</id>
+            <properties>
+                <active>prod</active>
+            </properties>
+        </profile>
+    </profiles>
+
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-maven-plugin</artifactId>
+                    <version>${spring.boot.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <version>${maven.surefire.version}</version>
+                    <configuration>
+                        <skipTests>true</skipTests>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>com.spotify</groupId>
+                    <artifactId>docker-maven-plugin</artifactId>
+                    <version>${docker.plugin.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>com.spotify</groupId>
+                    <artifactId>docker-maven-plugin</artifactId>
+                    <version>${docker.plugin.version}</version>
+                    <configuration>
+                        <imageName>leimingtech-cloud/${project.artifactId}</imageName>
+                        <dockerHost>http://192.168.1.240:2375</dockerHost>
+                        <dockerDirectory>${project.basedir}/</dockerDirectory>
+                        <forceTags>true</forceTags>
+                        <resources>
+                            <resource>
+                                <targetPath>/</targetPath>
+                                <directory>${project.build.directory}</directory>
+                                <include>${project.build.finalName}.jar</include>
+                            </resource>
+                        </resources>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-checkstyle-plugin</artifactId>
+                <version>${maven.checkstyle.version}</version>
+                <configuration>
+                    <configLocation>${checkstyle.config.location}</configLocation>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+
+</project>
