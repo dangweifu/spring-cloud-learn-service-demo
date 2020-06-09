@@ -1,0 +1,33 @@
+//
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by Fernflower decompiler)
+//
+
+package org.wiulus.spring.cloud.logs.tracing;
+
+import org.slf4j.MDC;
+
+public class TraceUtil {
+    private static final String KEY_TRACE_ID = "trace-id";
+    private static final String KEY_SPAN_ID = "span-id";
+    private static final String KEY_PARENT_SPAN_ID = "parent-id";
+
+    public TraceUtil() {
+    }
+
+    public static String getTraceId() {
+        return get("trace-id");
+    }
+
+    public static String getSpanId() {
+        return get("span-id");
+    }
+
+    public static String getParentSpanId() {
+        return get("parent-id");
+    }
+
+    public static String get(String key) {
+        return MDC.get(key);
+    }
+}
