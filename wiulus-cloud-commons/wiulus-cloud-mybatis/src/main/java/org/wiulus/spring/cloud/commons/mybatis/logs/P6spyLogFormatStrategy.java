@@ -5,7 +5,7 @@ import com.p6spy.engine.spy.appender.MessageFormattingStrategy;
 /**
  * p6spySQL日志格式打印
  *
- * @author lixiang
+ * @author WiuLuS
  * @version V1.0
  * @date 2020/1/16 9:50
  **/
@@ -24,7 +24,7 @@ public class P6spyLogFormatStrategy implements MessageFormattingStrategy {
      * @param url:          数据库连接地址
      * @return 格式化日志结果
      * @date 2020/1/16 9:52
-     * @author lixiangx@leimingtech.com
+     * @author m13886933623@163.com
      **/
     @Override
     public String formatMessage(int connectionId, String now, long elapsed,

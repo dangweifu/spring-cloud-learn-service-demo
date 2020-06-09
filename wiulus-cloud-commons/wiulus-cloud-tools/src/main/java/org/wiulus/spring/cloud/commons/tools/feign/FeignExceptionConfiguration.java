@@ -3,8 +3,8 @@ package org.wiulus.spring.cloud.commons.tools.feign;
 import com.alibaba.fastjson.JSONObject;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.leimingtech.exception.ServiceException;
-import com.leimingtech.exception.ServiceStatusCode;
+//import com.leimingtech.exception.ServiceException;
+//import com.leimingtech.exception.ServiceStatusCode;
 import com.netflix.hystrix.exception.HystrixBadRequestException;
 import feign.Response;
 import feign.Util;
@@ -48,8 +48,8 @@ public class FeignExceptionConfiguration {
 
 
                 if (result.getStatus() != HttpStatus.OK.value()) {
-                    ServiceException  serviceException = new ServiceException(new ServiceStatusCode.InternalServiceStatusCode(String.valueOf(jsonObject.get("errorCode")), result.getMessage(),new Object[0]));
-                    exception = new HystrixBadRequestException("",serviceException);
+//                    ServiceException  serviceException = new ServiceException(new ServiceStatusCode.InternalServiceStatusCode(String.valueOf(jsonObject.get("errorCode")), result.getMessage(),new Object[0]));
+//                    exception = new HystrixBadRequestException("",serviceException);
                 }
             } catch (IOException ex) {
                 log.error(ex.getMessage(), ex);

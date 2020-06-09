@@ -7,17 +7,6 @@
 package org.wiulus.spring.cloud.commons.tools.aspect;
 
 import com.alibaba.fastjson.JSON;
-import com.leimingtech.commons.tools.annotation.LogOperation;
-import com.leimingtech.commons.tools.config.ModuleConfig;
-import com.leimingtech.commons.tools.log.SysLogOperation;
-import com.leimingtech.commons.tools.log.enums.LogTypeEnum;
-import com.leimingtech.commons.tools.log.enums.OperationStatusEnum;
-import com.leimingtech.commons.tools.security.user.SecurityUser;
-import com.leimingtech.commons.tools.security.user.UserDetail;
-import com.leimingtech.commons.tools.utils.HttpContextUtils;
-import com.leimingtech.commons.tools.utils.IpUtils;
-import com.leimingtech.mq.constant.MqConstant;
-import com.leimingtech.mq.service.RabbitMqSendService;
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
@@ -29,6 +18,14 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.stereotype.Component;
+import org.wiulus.spring.cloud.commons.tools.annotation.LogOperation;
+import org.wiulus.spring.cloud.commons.tools.log.SysLogOperation;
+import org.wiulus.spring.cloud.commons.tools.log.enums.LogTypeEnum;
+import org.wiulus.spring.cloud.commons.tools.log.enums.OperationStatusEnum;
+import org.wiulus.spring.cloud.commons.tools.security.user.SecurityUser;
+import org.wiulus.spring.cloud.commons.tools.security.user.UserDetail;
+import org.wiulus.spring.cloud.commons.tools.utils.HttpContextUtils;
+import org.wiulus.spring.cloud.commons.tools.utils.IpUtils;
 
 import javax.servlet.http.HttpServletRequest;
 import java.lang.reflect.Method;
@@ -47,11 +44,11 @@ public class LogOperationAspect {
 
     private static Logger logger = LoggerFactory.getLogger(LogOperationAspect.class);
 
-    @Autowired
-    private ModuleConfig moduleConfig;
+//    @Autowired
+//    private ModuleConfig moduleConfig;
 
-    @Autowired
-    private RabbitMqSendService rabbitMqSendService;
+//    @Autowired
+//    private RabbitMqSendService rabbitMqSendService;
 
     @Pointcut("@annotation(com.leimingtech.commons.tools.annotation.LogOperation)")
     public void logPointCut() {
@@ -99,7 +96,8 @@ public class LogOperationAspect {
         }
 
         log.setType(LogTypeEnum.OPERATION.value());
-        log.setModule(moduleConfig.getName());
+        // TODO
+//        log.setModule(moduleConfig.getName());
         log.setStatus(status);
         log.setRequestTime((int) time);
         log.setCreateDate(new Date());
@@ -119,9 +117,9 @@ public class LogOperationAspect {
         } catch (Exception e) {
             logger.error("错误信息为" + e);
         }
-        //使用RabbitMQ发送消息进行日志处理
-        rabbitMqSendService.sendMsg(MqConstant.LEIMINGTECH_ADMIN_OPERATION_LOG_QUEUE,
-                JSON.toJSONString(log));
+        // TODO 使用RabbitMQ发送消息进行日志处理
+//        rabbitMqSendService.sendMsg(MqConstant.LEIMINGTECH_ADMIN_OPERATION_LOG_QUEUE,
+//                JSON.toJSONString(log));
 
     }
 }

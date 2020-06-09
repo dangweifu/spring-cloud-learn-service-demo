@@ -19,7 +19,7 @@ import java.util.Date;
  * @author Mark sunlightcs@gmail.com
  * @since 1.0.0
  */
-@Data
+@Date
 @EqualsAndHashCode(callSuper=false)
 public class StoreLogLogin extends BaseLog {
     private static final long serialVersionUID = 1L;

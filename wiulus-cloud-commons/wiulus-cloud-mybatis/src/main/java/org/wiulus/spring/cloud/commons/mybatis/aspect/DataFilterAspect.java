@@ -9,7 +9,22 @@
 package org.wiulus.spring.cloud.commons.mybatis.aspect;
 
 
+import cn.hutool.core.collection.CollUtil;
+import org.apache.commons.lang3.StringUtils;
+import org.aspectj.lang.JoinPoint;
+import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Before;
+import org.aspectj.lang.annotation.Pointcut;
+import org.aspectj.lang.reflect.MethodSignature;
 import org.springframework.stereotype.Component;
+import org.wiulus.spring.cloud.commons.mybatis.annotation.DataFilter;
+import org.wiulus.spring.cloud.commons.mybatis.entity.DataScope;
+import org.wiulus.spring.cloud.commons.tools.constant.Contants;
+import org.wiulus.spring.cloud.commons.tools.enums.SuperAdminEnum;
+import org.wiulus.spring.cloud.commons.tools.exception.CustomException;
+import org.wiulus.spring.cloud.commons.tools.exception.ErrorCode;
+import org.wiulus.spring.cloud.commons.tools.security.user.SecurityUser;
+import org.wiulus.spring.cloud.commons.tools.security.user.UserDetail;
 
 import java.util.List;
 import java.util.Map;
@@ -38,7 +53,7 @@ public class DataFilterAspect {
             if(user.getSuperAdmin() == SuperAdminEnum.NO.value()){
                 Map map = (Map)params;
                 String sqlFilter = getSqlFilter(user, point);
-                map.put(Constant.SQL_FILTER, new DataScope(sqlFilter));
+                map.put(Contants.SQL_FILTER, new DataScope(sqlFilter));
             }
 
             return ;

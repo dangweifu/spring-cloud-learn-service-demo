@@ -6,13 +6,13 @@
 
 package org.wiulus.spring.cloud.commons.tools.security.user;
 
-import com.leimingtech.commons.tools.constant.Constant;
-import com.leimingtech.commons.tools.redis.SellerDetailRedis;
-import com.leimingtech.commons.tools.redis.UserDetailRedis;
-import com.leimingtech.commons.tools.utils.HttpContextUtils;
-import com.leimingtech.commons.tools.utils.SpringContextUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
+import org.wiulus.spring.cloud.commons.tools.constant.Contants;
+import org.wiulus.spring.cloud.commons.tools.redis.SellerDetailRedis;
+import org.wiulus.spring.cloud.commons.tools.redis.UserDetailRedis;
+import org.wiulus.spring.cloud.commons.tools.utils.HttpContextUtils;
+import org.wiulus.spring.cloud.commons.tools.utils.SpringContextUtils;
 
 import javax.servlet.http.HttpServletRequest;
 import java.io.UnsupportedEncodingException;
@@ -58,7 +58,7 @@ public class SecurityUser {
      *
      * @return 用户名
      * @date 2019/7/11 11:17
-     * @author lixiang
+     * @author WiuLuS
      **/
     public static String getUserName() {
         HttpServletRequest request = HttpContextUtils.getHttpServletRequest();
@@ -72,7 +72,7 @@ public class SecurityUser {
         // 编码 在网关添加内容是编码  URLEncoder.encode(str, "UTF-8");
         // 解码 微服务获取时解码 URLDecoder.decode(str, "UTF-8");
         try {
-            String userName = request.getHeader(Constant.USER_NAME_KEY);
+            String userName = request.getHeader(Contants.USER_NAME_KEY);
             if (StringUtils.isNotBlank(userName)) {
                 return URLDecoder.decode(userName, "UTF-8");
             }
@@ -91,7 +91,7 @@ public class SecurityUser {
             return null;
         }
 
-        String userId = request.getHeader(Constant.USER_KEY);
+        String userId = request.getHeader(Contants.USER_KEY);
         if (StringUtils.isBlank(userId)) {
             return null;
         }
@@ -116,7 +116,7 @@ public class SecurityUser {
      *
      * @return seller用户基础信息
      * @date 2019/6/26 15:24
-     * @author lixiang
+     * @author WiuLuS
      **/
     public static SellerDetail getSeller() {
         Long sellerId = SecurityUser.getSellerId();
@@ -133,7 +133,7 @@ public class SecurityUser {
      *
      * @return sellerId
      * @date 2019/6/26 15:25
-     * @author lixiang
+     * @author WiuLuS
      **/
     private static Long getSellerId() {
         HttpServletRequest request = HttpContextUtils.getHttpServletRequest();
@@ -142,7 +142,7 @@ public class SecurityUser {
             return null;
         }
 
-        String sellerId = request.getHeader(Constant.SELLER_USER_KEY);
+        String sellerId = request.getHeader(Contants.SELLER_USER_KEY);
         if (StringUtils.isBlank(sellerId)) {
             return null;
         }

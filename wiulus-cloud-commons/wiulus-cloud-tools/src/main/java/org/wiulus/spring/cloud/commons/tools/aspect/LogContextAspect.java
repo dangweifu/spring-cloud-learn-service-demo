@@ -1,18 +1,18 @@
 package org.wiulus.spring.cloud.commons.tools.aspect;
 
-import com.leimingtech.commons.tools.utils.SdkLogUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
 import org.springframework.stereotype.Component;
+import org.wiulus.spring.cloud.commons.tools.utils.SdkLogUtils;
 
 /**
- * @Author: SWH ab4856812@163.com
- * @Description:
- * @Date: 2019/7/1 10:53
- * @Version: V1.0
+ * @author : SWH ab4856812@163.com
+ * @Description :
+ * @Date : 2019/7/1 10:53
+ * @version : V1.0
  */
 @Slf4j
 @Aspect

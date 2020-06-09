@@ -6,14 +6,14 @@
 
 package org.wiulus.spring.cloud.commons.tools.security.resolver;
 
-import com.leimingtech.commons.tools.security.user.SecurityUser;
-import com.leimingtech.commons.tools.security.user.UserDetail;
 import org.springframework.core.MethodParameter;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.support.WebDataBinderFactory;
 import org.springframework.web.context.request.NativeWebRequest;
 import org.springframework.web.method.support.HandlerMethodArgumentResolver;
 import org.springframework.web.method.support.ModelAndViewContainer;
+import org.wiulus.spring.cloud.commons.tools.security.user.SecurityUser;
+import org.wiulus.spring.cloud.commons.tools.security.user.UserDetail;
 
 /**
  * 当前登录用户

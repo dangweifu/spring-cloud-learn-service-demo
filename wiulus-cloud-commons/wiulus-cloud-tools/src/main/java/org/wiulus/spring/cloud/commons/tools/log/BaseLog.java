@@ -18,7 +18,7 @@ import java.io.Serializable;
  * @author Mark sunlightcs@gmail.com
  * @since 1.0.0
  */
-@Data
+@Date
 public abstract class BaseLog implements Serializable {
     /**
      * 日志类型

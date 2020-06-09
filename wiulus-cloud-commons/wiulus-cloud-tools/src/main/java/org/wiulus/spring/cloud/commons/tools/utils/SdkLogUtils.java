@@ -1,15 +1,13 @@
 package org.wiulus.spring.cloud.commons.tools.utils;
 
-import com.leimingtech.commons.tools.annotation.LogContext;
-import com.leimingtech.commons.tools.annotation.LogContextParam;
-import com.leimingtech.logging.MonitorLogger;
-import com.leimingtech.logging.MonitorLoggerFactory;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.ArrayUtils;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.reflect.MethodSignature;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.wiulus.spring.cloud.commons.tools.annotation.LogContext;
+import org.wiulus.spring.cloud.commons.tools.annotation.LogContextParam;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Field;
@@ -20,10 +18,10 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * @Author: SWH ab4856812@163.com
- * @Description:
- * @Date: 2019/6/29 18:54
- * @Version: V1.0
+ * @author : SWH ab4856812@163.com
+ * @Description :
+ * @Date : 2019/6/29 18:54
+ * @version : V1.0
  */
 @Slf4j
 public class SdkLogUtils {
@@ -103,10 +101,10 @@ public class SdkLogUtils {
             }
         }
         if (null != logContext) {
-            //声明切入点监控日志
-            MonitorLogger monitorLogger = MonitorLoggerFactory.getMonitorLogger(methodSignature.getDeclaringType());
-            log.info("被调用方法{}入参输出......", methodNameGet);
-            monitorLogger.info(logContext.code(), logContext.note(), logContextMap);
+            //TODO 声明切入点监控日志
+//            MonitorLogger monitorLogger = MonitorLoggerFactory.getMonitorLogger(methodSignature.getDeclaringType());
+//            log.info("被调用方法{}入参输出......", methodNameGet);
+//            monitorLogger.info(logContext.code(), logContext.note(), logContextMap);
             //移除完成后的线程本地变量
             ThreadLocalUtils.logContextServiceParamThreadLocal.remove();
             ThreadLocalUtils.logContextThreadLocal.remove();

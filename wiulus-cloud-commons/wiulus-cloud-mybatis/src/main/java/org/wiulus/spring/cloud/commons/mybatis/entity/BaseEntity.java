@@ -18,7 +18,7 @@ import java.util.Date;
  * @author Mark sunlightcs@gmail.com
  * @since 1.0.0
  */
-@Data
+@Date
 public abstract class BaseEntity implements Serializable {
 
     /**

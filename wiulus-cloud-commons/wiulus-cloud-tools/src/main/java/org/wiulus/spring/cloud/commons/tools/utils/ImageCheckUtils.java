@@ -1,9 +1,9 @@
 package org.wiulus.spring.cloud.commons.tools.utils;
 
 import com.google.common.collect.Maps;
-import com.leimingtech.commons.tools.upload.util.Base64Util;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.multipart.MultipartFile;
+import org.wiulus.spring.cloud.commons.tools.upload.util.Base64Util;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
@@ -17,10 +17,8 @@ import java.util.Map;
 
 /**
  * 图片检验工具
- *
- * @ClassName:ImageCheckUtils
- * @Data:2019/5/12 11:15
- * @Author：chengqian
+ * @Date :2019/5/12 11:15
+ * @author ：WiuLuS
  * @Version 1.0
  */
 @Slf4j
@@ -69,7 +67,7 @@ public class ImageCheckUtils {
      * @param base64Str
      * @return
      * @date 2019/8/6 17:13
-     * @author lixiang
+     * @author WiuLuS
      **/
     public static Map<String, Object> isImage(String base64Str) {
         Map<String, Object> result = new HashMap<>(16);

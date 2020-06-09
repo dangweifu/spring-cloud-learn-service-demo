@@ -37,7 +37,7 @@ public class DataSourceProperties {
     private int maxOpenPreparedStatements = -1;
     private boolean sharePreparedStatements = false;
     // private String filters = "stat,wall";
-    // LX 17839193044@162.com wall与flyway冲突
+    // m13886933623@163.com wall与flyway冲突
     private String filters = "stat";
 
     public String getDriverClassName() {

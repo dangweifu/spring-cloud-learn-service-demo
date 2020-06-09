@@ -21,7 +21,7 @@ import java.util.List;
  * @author Mark sunlightcs@gmail.com
  * @since 1.0.0
  */
-@Data
+@Date
 @ApiModel(description = "PageData")
 public class PageData<T> implements Serializable {
     private static final long serialVersionUID = 1L;

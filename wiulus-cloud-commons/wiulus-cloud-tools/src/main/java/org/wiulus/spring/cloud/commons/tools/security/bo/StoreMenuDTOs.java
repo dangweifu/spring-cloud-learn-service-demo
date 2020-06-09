@@ -8,14 +8,14 @@
 
 package org.wiulus.spring.cloud.commons.tools.security.bo;
 
-import com.leimingtech.commons.tools.utils.TreeNode;
-import com.leimingtech.commons.tools.validator.group.AddGroup;
-import com.leimingtech.commons.tools.validator.group.DefaultGroup;
-import com.leimingtech.commons.tools.validator.group.UpdateGroup;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import org.hibernate.validator.constraints.Range;
+import org.wiulus.spring.cloud.commons.tools.utils.TreeNode;
+import org.wiulus.spring.cloud.commons.tools.validator.group.AddGroup;
+import org.wiulus.spring.cloud.commons.tools.validator.group.DefaultGroup;
+import org.wiulus.spring.cloud.commons.tools.validator.group.UpdateGroup;
 
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
@@ -30,7 +30,7 @@ import java.io.Serializable;
  * @since 1.0.0
  */
 @ApiModel(value = "商家菜单管理")
-@Data
+@Date
 public class StoreMenuDTOs extends TreeNode<StoreMenuDTOs> implements Serializable {
     private static final long serialVersionUID = 1L;
 

@@ -5,10 +5,10 @@ import org.wiulus.spring.cloud.commons.tools.annotation.LogContext;
 import org.wiulus.spring.cloud.commons.tools.annotation.LogContextParam;
 
 /**
- * @Author: SWH ab4856812@163.com
- * @Description:
- * @Date: 2019/6/29 18:54
- * @Version: V1.0
+ * @author : SWH ab4856812@163.com
+ * @Description :
+ * @Date : 2019/6/29 18:54
+ * @version : V1.0
  */
 public class ThreadLocalUtils {
 

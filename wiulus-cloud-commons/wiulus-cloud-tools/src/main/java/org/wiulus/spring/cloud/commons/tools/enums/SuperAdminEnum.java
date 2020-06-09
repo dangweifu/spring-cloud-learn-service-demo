@@ -15,6 +15,9 @@ package org.wiulus.spring.cloud.commons.tools.enums;
  * @since 1.0.0
  */
 public enum SuperAdminEnum {
+    /**
+     * 超级管理员枚举
+     */
     YES(1),
     NO(0);
 

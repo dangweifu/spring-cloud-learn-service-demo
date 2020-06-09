@@ -15,7 +15,9 @@ import org.joda.time.format.DateTimeFormat;
 import org.joda.time.format.DateTimeFormatter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.core.convert.converter.Converter;
 
+import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -29,28 +31,91 @@ import java.util.List;
  * @author Mark sunlightcs@gmail.com
  * @since 1.0.0
  */
-public class DateUtils {
+public class DateUtils implements Converter<String, Date> {
 
     private DateUtils() {
     }
 
     private static Logger logger = LoggerFactory.getLogger(DateUtils.class);
-    /**
-     * 时间格式(yyyy-MM-dd)
-     */
-    public static final String DATE_PATTERN = "yyyy-MM-dd";
-    /**
-     * 时间格式(yyyy-MM-dd HH)
-     */
-    public static final String DATE_HOUR_PATTERN = "yyyy-MM-dd HH";
+    private static List<String> formatList = new ArrayList<>(5);
     /**
      * 时间格式(yyyy-MM)
      */
-    public static final String DATE_MONTH_PATTERN = "yyyy-MM";
+    public static final String DATE_MONTH_PATTERN       = "yyyy-MM";
+    /**
+     * 时间格式(yyyy-MM-dd)
+     */
+    public static final String DATE_PATTERN             = "yyyy-MM-dd";
+    /**
+     * 时间格式(yyyy-MM-dd HH)
+     */
+    public static final String DATE_HOUR_PATTERN        = "yyyy-MM-dd HH";
     /**
      * 时间格式(yyyy-MM-dd HH:mm:ss)
      */
-    public static final String DATE_TIME_PATTERN = "yyyy-MM-dd HH:mm:ss";
+    public static final String DATE_SECOND_PATTERN      = "yyyy-MM-dd HH:mm";
+    /**
+     * 时间格式(yyyy-MM-dd HH:mm:ss)
+     */
+    public static final String DATE_TIME_PATTERN        = "yyyy-MM-dd HH:mm:ss";
+    /**
+     * 时间格式(yyyy-MM-dd HH:mm:ss.SSSZ)
+     */
+    public static final String DATE_TIME_SSSZ_PATTERN        = "yyyy-MM-dd HH:mm:ss.SSSZ";
+    static {
+        formatList.add(DATE_MONTH_PATTERN);
+        formatList.add(DATE_PATTERN);
+        formatList.add(DATE_HOUR_PATTERN);
+        formatList.add(DATE_SECOND_PATTERN);
+        formatList.add(DATE_TIME_PATTERN);
+        formatList.add(DATE_TIME_SSSZ_PATTERN);
+    }
+
+    @Override
+    public Date convert(String source) {
+        return convertBy(source);
+    }
+    public static Date convertBy (String source) {
+        String value = source.trim();
+        if (org.springframework.util.StringUtils.isEmpty(value)) {
+            return null;
+        }
+
+        if(source.matches("^\\d{4}-\\d{1,2}$")){
+            return parseDate(source, formatList.get(0));
+        }else if(source.matches("^\\d{4}-\\d{1,2}-\\d{1,2}$")){
+            return parseDate(source, formatList.get(1));
+        }else if(source.matches("^\\d{4}-\\d{1,2}-\\d{1,2} {1}\\d{1,2}$")){
+            return parseDate(source, formatList.get(2));
+        }else if(source.matches("^\\d{4}-\\d{1,2}-\\d{1,2} {1}\\d{1,2}:\\d{1,2}$")){
+            return parseDate(source, formatList.get(3));
+        }else if(source.matches("^\\d{4}-\\d{1,2}-\\d{1,2} {1}\\d{1,2}:\\d{1,2}:\\d{1,2}$")){
+            return parseDate(source, formatList.get(4));
+        }else if(source.matches("^\\d{4}-\\d{1,2}-\\d{1,2}.*T.*\\d{1,2}:\\d{1,2}:\\d{1,2}.*..*$")){
+            return parseDate(source, formatList.get(5));
+        } else {
+            throw new IllegalArgumentException("Invalid boolean value '" + source + "'");
+        }
+    }
+    /**
+     * 格式化日期
+     * @param dateStr String 字符型日期
+     * @param format String 格式
+     * @return Date 日期
+     */
+    private static Date parseDate(String dateStr, String format) {
+        Date date = null;
+        try {
+            DateFormat dateFormat = new SimpleDateFormat(format);
+            date = dateFormat.parse(dateStr);
+        } catch (Exception e) {
+            logger.error("Formatted date with date: {} and format : {} ", dateStr, format);
+        }
+        return date;
+    }
+
+
+
 
     /**
      * 日期格式化 日期格式为：yyyy-MM-dd
@@ -85,12 +150,7 @@ public class DateUtils {
      * @return 返回Date
      */
     public static Date parse(String date, String pattern) {
-        try {
-            return new SimpleDateFormat(pattern).parse(date);
-        } catch (ParseException e) {
-            logger.error("错误信息为" + e);
-        }
-        return null;
+        return parseDate(date,pattern);
     }
 
     /**
@@ -266,7 +326,7 @@ public class DateUtils {
      * @param format: 格式
      * @return 格式化的时间
      * @date 2019/12/26 9:49
-     * @author lixiangx@leimingtech.com
+     * @author m13886933623@163.com
      **/
     public static Date longToDate(long time, String format) {
         Date d = new Date(time);
@@ -337,7 +397,7 @@ public class DateUtils {
      * @param toDate:   结束时间
      * @return 相差月数
      * @date 2019/12/25 16:11
-     * @author lixiangx@leimingtech.com
+     * @author m13886933623@163.com
      **/
     public static int monthCompare(Date fromDate, Date toDate) {
         Calendar from = Calendar.getInstance();
@@ -365,7 +425,7 @@ public class DateUtils {
      *
      * @return 当年的第一天
      * @date 2019/12/25 16:14
-     * @author lixiangx@leimingtech.com
+     * @author m13886933623@163.com
      **/
     public static Date getCurrYearFirst() {
         Calendar currCal = Calendar.getInstance();
@@ -383,7 +443,7 @@ public class DateUtils {
      *
      * @return 当年最后一天
      * @date 2019/12/25 16:16
-     * @author lixiangx@leimingtech.com
+     * @author m13886933623@163.com
      **/
     public static Date getCurrYearLast() {
         Calendar currCal = Calendar.getInstance();

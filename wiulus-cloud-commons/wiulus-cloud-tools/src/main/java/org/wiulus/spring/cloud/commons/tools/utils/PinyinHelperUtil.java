@@ -3,11 +3,6 @@ package org.wiulus.spring.cloud.commons.tools.utils;
 import net.sourceforge.pinyin4j.PinyinHelper;
 
 /**
- * 项目名称：leimingshop-service
- * 类描述： 得到中文首字母
- * 创建人：weixianchun
- * 创建时间：2019/7/6 18:38
- *
  * @version V1.0
  */
 public class PinyinHelperUtil {
@@ -42,7 +37,7 @@ public class PinyinHelperUtil {
      * @param str: 字符
      * @return 小写英文全拼
      * @date 2019/12/16 10:00
-     * @author lixiangx@leimingtech.com
+     * @author m13886933623@163.com
      **/
     public static String getPinYinAllChar(String str) {
         StringBuilder convert = new StringBuilder();
@@ -65,7 +60,7 @@ public class PinyinHelperUtil {
      * @param str: 字符
      * @return 字符首字母
      * @date 2019/12/16 10:00
-     * @author lixiangx@leimingtech.com
+     * @author m13886933623@163.com
      **/
     public static String getPinYinAllHeadChar(String str) {
         StringBuilder convert = new StringBuilder();

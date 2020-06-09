@@ -19,7 +19,7 @@ import java.io.Serializable;
  * @author Mark sunlightcs@gmail.com
  * @since 1.0.0
  */
-@Data
+@Date
 @ApiModel(description = "Result")
 public class Result<T> implements Serializable {
     private static final long serialVersionUID = 1L;

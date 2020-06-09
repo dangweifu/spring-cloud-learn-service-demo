@@ -109,7 +109,7 @@ public class Base64Util {
      * @param base64Str: 图片对应的base64字符串
      * @return: byte数值
      * @date 2019/8/6 17:31
-     * @author lixiang
+     * @author WiuLuS
      **/
     public static byte[] imgBase64ToByte(String base64Str) {
 

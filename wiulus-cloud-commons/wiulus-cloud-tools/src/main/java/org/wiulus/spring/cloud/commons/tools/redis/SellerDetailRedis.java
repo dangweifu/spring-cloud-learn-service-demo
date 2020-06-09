@@ -8,18 +8,18 @@ package org.wiulus.spring.cloud.commons.tools.redis;
 
 import cn.hutool.core.bean.BeanUtil;
 import cn.hutool.core.map.MapUtil;
-import com.leimingtech.commons.tools.security.enums.UserKillEnum;
-import com.leimingtech.commons.tools.security.user.SellerDetail;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.wiulus.spring.cloud.commons.tools.security.enums.UserKillEnum;
+import org.wiulus.spring.cloud.commons.tools.security.user.SellerDetail;
 
 import java.util.Map;
 
 /**
- * @Author: lixiang
- * @Description: Seller用户Redis
- * @Date: 2019/6/26 14:58
- * @Version: V1.0
+ * @author : WiuLuS
+ * @Description : Seller用户Redis
+ * @Date : 2019/6/26 14:58
+ * @version : V1.0
  */
 @Component
 public class SellerDetailRedis {
@@ -34,7 +34,7 @@ public class SellerDetailRedis {
      * @param expire:       用户redis时长
      * @return
      * @date 2019/6/26 14:58
-     * @author lixiang
+     * @author WiuLuS
      **/
     public void set(SellerDetail sellerDetail, long expire) {
         if (sellerDetail == null) {
@@ -57,7 +57,7 @@ public class SellerDetailRedis {
      * @param sellerId: sellerID
      * @return 返回Seller用户
      * @date 2019/6/26 15:05
-     * @author lixiang
+     * @author WiuLuS
      **/
     public SellerDetail get(Long sellerId) {
 
@@ -78,7 +78,7 @@ public class SellerDetailRedis {
      *
      * @param sellerId: seller用户Id
      * @date 2019/6/26 15:07
-     * @author lixiang
+     * @author WiuLuS
      **/
     public void logout(Long sellerId) {
         String key = RedisKeys.getSecuritySellerKey(sellerId);

@@ -6,19 +6,19 @@
 
 package org.wiulus.spring.cloud.commons.tools.security.user;
 
-import com.leimingtech.commons.tools.security.bo.ResourceBO;
 import lombok.Data;
+import org.wiulus.spring.cloud.commons.tools.security.bo.ResourceBO;
 
 import java.io.Serializable;
 import java.util.List;
 
 /**
- * @Author: lixiang
- * @Description: Seller登录用户信息
- * @Date: 2019/6/26 14:54
- * @Version: V1.0
+ * @author : WiuLuS
+ * @Description : Seller登录用户信息
+ * @Date : 2019/6/26 14:54
+ * @version : V1.0
  */
-@Data
+@Date
 public class SellerDetail implements Serializable {
 
     private static final long serialVersionUID = 8628341772498364793L;

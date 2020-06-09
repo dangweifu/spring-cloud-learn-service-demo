@@ -14,6 +14,9 @@ import lombok.Getter;
 @Getter
 public enum ExcelEnum {
 
+    /**
+     * 商品导出
+     */
    GOODS_EXPORT("goods_export","商品导出"),;
 
    private String code;

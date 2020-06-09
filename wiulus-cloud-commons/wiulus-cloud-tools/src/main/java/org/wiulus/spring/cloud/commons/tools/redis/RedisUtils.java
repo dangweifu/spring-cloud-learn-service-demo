@@ -34,7 +34,7 @@ public class RedisUtils {
     /**
      * 过期时长为1小时，单位：秒
      */
-    public static final long HOUR_ONE_EXPIRE = 60 * 60 * 1L;
+    public static final long HOUR_ONE_EXPIRE = 60 * 60L;
     /**
      * 过期时长为2小时，单位：秒
      */
@@ -58,7 +58,7 @@ public class RedisUtils {
     /**
      * 获取锁过期时间  1h
      */
-    public static final int LOCK_EXPIRE = 1 * 60 * 60 * 1000;
+    public static final int LOCK_EXPIRE = 60 * 60 * 1000;
 
     public RedisUtils(RedisTemplate<String, Object> redisTemplate) {
         this.redisTemplate = redisTemplate;
@@ -68,11 +68,11 @@ public class RedisUtils {
      * @param key:    redis中的Key
      * @param value:  redis中的value
      * @param expire: 过期时间（单位秒）
-     * @Author: LX 17839193044@162.com
-     * @Description: 数据保存到Redis中
-     * @Date: 2019/5/20 9:47
+     * @author : m13886933623@163.com
+     * @Description : 数据保存到Redis中
+     * @Date : 2019/5/20 9:47
      * @Update: 增加注释
-     * @Version: V1.0
+     * @version : V1.0
      */
     public void set(String key, Object value, long expire) {
         redisTemplate.opsForValue().set(key, value);
@@ -84,10 +84,10 @@ public class RedisUtils {
     /**
      * @param key:   Redis的key
      * @param value: 数据
-     * @Author: LX 17839193044@162.com
-     * @Description: 使用默认过期时间存储数据
-     * @Date: 2019/5/20 9:48
-     * @Version: V1.0
+     * @author : m13886933623@163.com
+     * @Description : 使用默认过期时间存储数据
+     * @Date : 2019/5/20 9:48
+     * @version : V1.0
      */
     public void set(String key, Object value) {
         set(key, value, DEFAULT_EXPIRE);
@@ -96,10 +96,10 @@ public class RedisUtils {
     /**
      * @param key:    redis key
      * @param expire: 过期时间
-     * @Author: LX 17839193044@162.com
-     * @Description: 获取缓存数据，并设置过期时间
-     * @Date: 2019/5/20 9:58
-     * @Version: V1.0
+     * @author : m13886933623@163.com
+     * @Description : 获取缓存数据，并设置过期时间
+     * @Date : 2019/5/20 9:58
+     * @version : V1.0
      */
     public Object get(String key, long expire) {
         Object value = redisTemplate.opsForValue().get(key);
@@ -111,10 +111,10 @@ public class RedisUtils {
 
     /**
      * @param key: redis key
-     * @Author: LX 17839193044@162.com
-     * @Description: 直接获取缓存数据
-     * @Date: 2019/5/20 10:16
-     * @Version: V1.0
+     * @author : m13886933623@163.com
+     * @Description : 直接获取缓存数据
+     * @Date : 2019/5/20 10:16
+     * @version : V1.0
      */
     public Object get(String key) {
         return get(key, NOT_EXPIRE);
@@ -122,10 +122,10 @@ public class RedisUtils {
 
     /**
      * @param pattern: 匹配关键词
-     * @Author: LX 17839193044@162.com
-     * @Description: Redis模糊匹配
-     * @Date: 2019/5/20 10:17
-     * @Version: V1.0
+     * @author : m13886933623@163.com
+     * @Description : Redis模糊匹配
+     * @Date : 2019/5/20 10:17
+     * @version : V1.0
      */
     public Set<String> keys(String pattern) {
         return redisTemplate.keys(pattern);
@@ -133,10 +133,10 @@ public class RedisUtils {
 
     /**
      * @param pattern: 匹配关键词
-     * @Author: LX 17839193044@162.com
-     * @Description: 删除模糊匹配缓存
-     * @Date: 2019/5/20 10:18
-     * @Version: V1.0
+     * @author : m13886933623@163.com
+     * @Description : 删除模糊匹配缓存
+     * @Date : 2019/5/20 10:18
+     * @version : V1.0
      */
     public void deleteByPattern(String pattern) {
         redisTemplate.delete(keys(pattern));
@@ -144,10 +144,10 @@ public class RedisUtils {
 
     /**
      * @param key: redis key
-     * @Author: LX 17839193044@162.com
-     * @Description: 根据Key删除缓存数据
-     * @Date: 2019/5/20 10:18
-     * @Version: V1.0
+     * @author : m13886933623@163.com
+     * @Description : 根据Key删除缓存数据
+     * @Date : 2019/5/20 10:18
+     * @version : V1.0
      */
     public void delete(String key) {
         redisTemplate.delete(key);
@@ -155,10 +155,10 @@ public class RedisUtils {
 
     /**
      * @param keys: key集合
-     * @Author: LX 17839193044@162.com
-     * @Description: 根据key集合删除缓存数据
-     * @Date: 2019/5/20 10:18
-     * @Version: V1.0
+     * @author : m13886933623@163.com
+     * @Description : 根据key集合删除缓存数据
+     * @Date : 2019/5/20 10:18
+     * @version : V1.0
      */
     public void delete(Collection<String> keys) {
         redisTemplate.delete(keys);
@@ -167,10 +167,10 @@ public class RedisUtils {
     /**
      * @param key:   hash key
      * @param field: 指定的field
-     * @Author: LX 17839193044@162.com
-     * @Description: 获取hash类型中指定field，有则返回，没有返回null
-     * @Date: 2019/5/20 10:27
-     * @Version: V1.0
+     * @author : m13886933623@163.com
+     * @Description : 获取hash类型中指定field，有则返回，没有返回null
+     * @Date : 2019/5/20 10:27
+     * @version : V1.0
      */
     public Object hGet(String key, String field) {
         return redisTemplate.opsForHash().get(key, field);
@@ -178,10 +178,10 @@ public class RedisUtils {
 
     /**
      * @param key: hash key
-     * @Author: LX 17839193044@162.com
-     * @Description: 获取hash key下面全部的数据
-     * @Date: 2019/5/20 10:50
-     * @Version: V1.0
+     * @author : m13886933623@163.com
+     * @Description : 获取hash key下面全部的数据
+     * @Date : 2019/5/20 10:50
+     * @version : V1.0
      */
     public Map<String, Object> hGetAll(String key) {
         HashOperations<String, String, Object> hashOperations = redisTemplate.opsForHash();
@@ -191,10 +191,10 @@ public class RedisUtils {
     /**
      * @param key: hash key
      * @param map: 数据
-     * @Author: LX 17839193044@162.com
-     * @Description: 存放Hash类型的缓存数据（设置默认过期时间24H）
-     * @Date: 2019/5/20 10:51
-     * @Version: V1.0
+     * @author : m13886933623@163.com
+     * @Description : 存放Hash类型的缓存数据（设置默认过期时间24H）
+     * @Date : 2019/5/20 10:51
+     * @version : V1.0
      */
     public void hMSet(String key, Map<String, Object> map) {
         hMSet(key, map, DEFAULT_EXPIRE);
@@ -204,10 +204,10 @@ public class RedisUtils {
      * @param key:    hash key
      * @param map:    数据
      * @param expire: 过期时间（秒）
-     * @Author: LX 17839193044@162.com
-     * @Description: 存放Hash类型的缓存数据
-     * @Date: 2019/5/20 10:51
-     * @Version: V1.0
+     * @author : m13886933623@163.com
+     * @Description : 存放Hash类型的缓存数据
+     * @Date : 2019/5/20 10:51
+     * @version : V1.0
      */
     public void hMSet(String key, Map<String, Object> map, long expire) {
         redisTemplate.opsForHash().putAll(key, map);
@@ -222,10 +222,10 @@ public class RedisUtils {
      * @param key:   hash key
      * @param field: field名称
      * @param value: 数据
-     * @Author: LX 17839193044@162.com
-     * @Description: 修改Hash类型缓存指定field的值
-     * @Date: 2019/5/20 10:53
-     * @Version: V1.0
+     * @author : m13886933623@163.com
+     * @Description : 修改Hash类型缓存指定field的值
+     * @Date : 2019/5/20 10:53
+     * @version : V1.0
      */
     public void hSet(String key, String field, Object value) {
         hSet(key, field, value, DEFAULT_EXPIRE);
@@ -242,10 +242,10 @@ public class RedisUtils {
     /**
      * @param key:    redis key
      * @param expire: 过期时间（单位秒）
-     * @Author: LX 17839193044@162.com
-     * @Description: 设置缓存过期时间
-     * @Date: 2019/5/20 9:54
-     * @Version: V1.0
+     * @author : m13886933623@163.com
+     * @Description : 设置缓存过期时间
+     * @Date : 2019/5/20 9:54
+     * @version : V1.0
      */
     public void expire(String key, long expire) {
         redisTemplate.expire(key, expire, TimeUnit.SECONDS);
@@ -255,10 +255,10 @@ public class RedisUtils {
     /**
      * @param key:    hash主键
      * @param fields: 可变参数的field
-     * @Author: LX 17839193044@162.com
-     * @Description: 删除指定filed数据
-     * @Date: 2019/5/20 10:55
-     * @Version: V1.0
+     * @author : m13886933623@163.com
+     * @Description : 删除指定filed数据
+     * @Date : 2019/5/20 10:55
+     * @version : V1.0
      */
     public void hDel(String key, Object... fields) {
         redisTemplate.opsForHash().delete(key, fields);
@@ -344,7 +344,7 @@ public class RedisUtils {
      * @param key:
      * @return java.lang.Long
      * @Description 获取过期时间
-     * @Author huangkeyuan
+     * @author WiuLuS
      * @Date 17:38 2019-12-19
      */
     public Long getExpire(String key) {
@@ -358,7 +358,7 @@ public class RedisUtils {
      * @param key: Reids key
      * @return 操作后的结果
      * @date 2020/3/9 13:53
-     * @author lixiangx@leimingtech.com
+     * @author m13886933623@163.com
      **/
     public Long decrement(String key) throws Exception {
         Boolean result = redisTemplate.hasKey(key);
@@ -375,7 +375,7 @@ public class RedisUtils {
      * @param key: Reids key
      * @return 操作后的结果
      * @date 2020/3/9 13:53
-     * @author lixiangx@leimingtech.com
+     * @author m13886933623@163.com
      **/
     public Long increment(String key) throws Exception {
         Boolean result = redisTemplate.hasKey(key);

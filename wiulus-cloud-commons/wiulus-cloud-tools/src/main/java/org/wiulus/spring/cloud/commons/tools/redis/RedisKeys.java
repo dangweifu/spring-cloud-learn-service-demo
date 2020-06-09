@@ -106,9 +106,9 @@ public class RedisKeys {
      * 获取seller端用户授权key
      *
      * @param id: 用户ID
-     * @return key
+     * @return : key
      * @date 2019/6/26 14:47
-     * @author lixiang
+     * @author WiuLuS
      **/
     public static String getSecuritySellerKey(Long id) {
         return "seller:security:user:" + id;
@@ -118,9 +118,9 @@ public class RedisKeys {
      * 获取seller登陆菜单key
      *
      * @param sellerId: seller用户ID
-     * @return 返回seller菜单Key
+     * @return : 返回seller菜单Key
      * @date 2019/6/26 15:01
-     * @author lixiang
+     * @author WiuLuS
      **/
     public static String getSellerMenuNavKey(Long sellerId) {
         return "seller:user:nav:" + sellerId + "_*";
@@ -130,9 +130,9 @@ public class RedisKeys {
      * 获取seller权限key
      *
      * @param sellerId: seller用户ID
-     * @return 返回seller权限Key
+     * @return : 返回seller权限Key
      * @date 2019/6/26 15:02
-     * @author lixiang
+     * @author WiuLuS
      **/
 
     public static String getSellerPermissionsKey(Long sellerId) {
@@ -143,7 +143,7 @@ public class RedisKeys {
      * 获取购物车KEY
      *
      * @param sessionId session id
-     * @return
+     * @return :
      */
     public static String getFrontCartKey(String sessionId) {
 
@@ -168,7 +168,7 @@ public class RedisKeys {
     /**
      * 系统设置Key
      *
-     * @return
+     * @return :
      */
     public static String getSysSettingKey(String key) {
         if (StringUtils.isNotBlank(key)) {
@@ -181,7 +181,7 @@ public class RedisKeys {
     /**
      * H5分类数据
      *
-     * @return
+     * @return :
      */
     public static String getH5CustomClass() {
 
@@ -192,7 +192,7 @@ public class RedisKeys {
      * H5 获取热词列表
      *
      * @date 2019/12/18 9:58
-     * @author lixiangx@leimingtech.com
+     * @author m13886933623@163.com
      **/
     public static String getFrontHotWords() {
         return "front:hotword";
@@ -230,7 +230,7 @@ public class RedisKeys {
     /**
      * 微信缓存ticket缓存 key
      *
-     * @return
+     * @return : :
      */
     public static String getWechatTicketKey() {
         return "wechat:ticket";

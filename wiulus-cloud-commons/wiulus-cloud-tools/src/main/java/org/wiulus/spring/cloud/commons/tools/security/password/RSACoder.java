@@ -12,13 +12,13 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @Author: LX 17839193044@162.com
- * @Description: RSA加密工具（
+ * @author : m13886933623@163.com
+ * @Description : RSA加密工具（
  * 字符串格式的密钥在未在特殊说明情况下都为BASE64编码格式<br/>
  * 由于非对称加密速度极其缓慢，一般文件不使用它来加密而是使用对称加密，<br/>
  * 非对称加密算法可以用来对对称加密的密钥加密，这样保证密钥的安全也就保证了数据的安全
- * @Date: 18:12 2019/1/23
- * @Version: V1.0
+ * @Date : 18:12 2019/1/23
+ * @version : V1.0
  */
 @Slf4j
 public class RSACoder {
@@ -42,8 +42,8 @@ public class RSACoder {
      *
      * @param data       加密数据
      * @param privateKey 私钥
-     * @return
-     * @throws Exception
+     * @return :
+     * @throws : Exception
      */
     public static String sign(byte[] data, String privateKey) throws Exception {
         // 解密由base64编码的私钥
@@ -67,8 +67,8 @@ public class RSACoder {
      * @param data      加密数据
      * @param publicKey 公钥
      * @param sign      数字签名
-     * @return 校验成功返回true 失败返回false
-     * @throws Exception
+     * @return : 校验成功返回true 失败返回false
+     * @throws : Exception
      */
     public static boolean verify(byte[] data, String publicKey, String sign)
             throws Exception {
@@ -90,10 +90,10 @@ public class RSACoder {
     /**
      * @param data: 密文的byte数组
      * @param key:  私钥
-     * @Author: LX 17839193044@162.com
-     * @Description: 使用私钥进行解密
-     * @Date: 2019/1/23 19:50
-     * @Version: V1.0
+     * @author : m13886933623@163.com
+     * @Description : 使用私钥进行解密
+     * @Date : 2019/1/23 19:50
+     * @version : V1.0
      */
     public static byte[] decryptByPrivateKey(byte[] data, String key) throws Exception {
         // 对密钥解密
@@ -111,10 +111,10 @@ public class RSACoder {
     /**
      * @param data: 密文
      * @param key:  私钥
-     * @Author: LX 17839193044@162.com
-     * @Description: 使用私钥进行解密
-     * @Date: 2019/1/23 19:52
-     * @Version: V1.0
+     * @author : m13886933623@163.com
+     * @Description : 使用私钥进行解密
+     * @Date : 2019/1/23 19:52
+     * @version : V1.0
      */
     public static byte[] decryptByPrivateKey(String data, String key)
             throws Exception {
@@ -123,10 +123,10 @@ public class RSACoder {
 
     /**
      * @param data: 密文
-     * @Author: LX 17839193044@162.com
-     * @Description: 使用系统默认私钥进行解密，并转化为字符串
-     * @Date: 2019/1/23 19:52
-     * @Version: V1.0
+     * @author : m13886933623@163.com
+     * @Description : 使用系统默认私钥进行解密，并转化为字符串
+     * @Date : 2019/1/23 19:52
+     * @version : V1.0
      */
     public static String decryptByPrivateKey(String data)
             throws Exception {
@@ -138,10 +138,10 @@ public class RSACoder {
     /**
      * @param data: 密文
      * @param key:  公钥
-     * @Author: LX 17839193044@162.com
-     * @Description: 解密 用公钥解密
-     * @Date: 2019/1/23 19:58
-     * @Version: V1.0
+     * @author : m13886933623@163.com
+     * @Description : 解密 用公钥解密
+     * @Date : 2019/1/23 19:58
+     * @version : V1.0
      */
     public static byte[] decryptByPublicKey(byte[] data, String key)
             throws Exception {
@@ -162,8 +162,8 @@ public class RSACoder {
      *
      * @param data
      * @param key
-     * @return
-     * @throws Exception
+     * @return :
+     * @throws : Exception
      */
     public static byte[] encryptByPublicKey(String data, String key)
             throws Exception {
@@ -185,8 +185,8 @@ public class RSACoder {
      *
      * @param data
      * @param key
-     * @return
-     * @throws Exception
+     * @return :
+     * @throws : Exception
      */
     public static byte[] encryptByPrivateKey(byte[] data, String key)
             throws Exception {
@@ -206,8 +206,8 @@ public class RSACoder {
      * 取得私钥
      *
      * @param keyMap
-     * @return
-     * @throws Exception
+     * @return :
+     * @throws : Exception
      */
     public static String getPrivateKey(Map<String, Key> keyMap)
             throws Exception {
@@ -219,8 +219,8 @@ public class RSACoder {
      * 取得公钥
      *
      * @param keyMap
-     * @return
-     * @throws Exception
+     * @return :
+     * @throws : Exception
      */
     public static String getPublicKey(Map<String, Key> keyMap)
             throws Exception {
@@ -229,10 +229,10 @@ public class RSACoder {
     }
 
     /**
-     * @Author: LX 17839193044@162.com
-     * @Description: 获取/conf下的私钥
-     * @Date: 2019/1/23 19:48
-     * @Version: V1.0
+     * @author : m13886933623@163.com
+     * @Description : 获取/conf下的私钥
+     * @Date : 2019/1/23 19:48
+     * @version : V1.0
      */
     public static String getPrivateKey() {
         //获取私钥文件流
@@ -241,10 +241,10 @@ public class RSACoder {
     }
 
     /**
-     * @Author: LX 17839193044@162.com
-     * @Description: 获取公钥
-     * @Date: 2019/1/23 19:47
-     * @Version: V1.0
+     * @author : m13886933623@163.com
+     * @Description : 获取公钥
+     * @Date : 2019/1/23 19:47
+     * @version : V1.0
      */
     public static String getPublicKey() {
         //获取文件流
@@ -255,8 +255,8 @@ public class RSACoder {
     /**
      * 初始化密钥
      *
-     * @return
-     * @throws Exception
+     * @return :
+     * @throws : Exception
      */
     public static Map<String, Key> initKey() throws Exception {
         KeyPairGenerator keyPairGen = KeyPairGenerator

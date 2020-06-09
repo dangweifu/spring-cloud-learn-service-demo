@@ -8,8 +8,8 @@
 
 package org.wiulus.spring.cloud.commons.tools.security.user;
 
-import com.leimingtech.commons.tools.security.bo.ResourceBO;
 import lombok.Data;
+import org.wiulus.spring.cloud.commons.tools.security.bo.ResourceBO;
 
 import java.io.Serializable;
 import java.util.List;
@@ -20,7 +20,7 @@ import java.util.List;
  * @author Mark sunlightcs@gmail.com
  * @since 1.0.0
  */
-@Data
+@Date
 public class UserDetail implements Serializable {
     private static final long serialVersionUID = 1L;
 

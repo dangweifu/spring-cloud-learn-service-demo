@@ -6,21 +6,21 @@
 
 package org.wiulus.spring.cloud.commons.tools.security.resolver;
 
-import com.leimingtech.commons.tools.security.user.SecurityUser;
-import com.leimingtech.commons.tools.security.user.SellerDetail;
 import org.springframework.core.MethodParameter;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.support.WebDataBinderFactory;
 import org.springframework.web.context.request.NativeWebRequest;
 import org.springframework.web.method.support.HandlerMethodArgumentResolver;
 import org.springframework.web.method.support.ModelAndViewContainer;
+import org.wiulus.spring.cloud.commons.tools.security.user.SecurityUser;
+import org.wiulus.spring.cloud.commons.tools.security.user.SellerDetail;
 
 
 /**
- * @Author: lixiang
- * @Description: 自定义参数解析器解析SellerDetail
- * @Date: 2019/6/26 15:22
- * @Version: V1.0
+ * @author : WiuLuS
+ * @Description : 自定义参数解析器解析SellerDetail
+ * @Date : 2019/6/26 15:22
+ * @version : V1.0
  */
 @Component
 public class SellerDetailHandlerMethodArgumentResolver implements HandlerMethodArgumentResolver {

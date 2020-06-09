@@ -8,15 +8,6 @@ package org.wiulus.spring.cloud.commons.tools.exception;
 
 import cn.hutool.core.map.MapUtil;
 import com.alibaba.fastjson.JSON;
-import com.leimingtech.commons.tools.config.ModuleConfig;
-import com.leimingtech.commons.tools.log.SysLogError;
-import com.leimingtech.commons.tools.log.enums.LogTypeEnum;
-import com.leimingtech.commons.tools.utils.HttpContextUtils;
-import com.leimingtech.commons.tools.utils.IpUtils;
-import com.leimingtech.commons.tools.utils.Result;
-import com.leimingtech.exception.ServiceException;
-import com.leimingtech.mq.constant.MqConstant;
-import com.leimingtech.mq.service.RabbitMqSendService;
 import com.netflix.hystrix.exception.HystrixBadRequestException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -25,6 +16,11 @@ import org.springframework.dao.DuplicateKeyException;
 import org.springframework.http.HttpHeaders;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
+import org.wiulus.spring.cloud.commons.tools.log.SysLogError;
+import org.wiulus.spring.cloud.commons.tools.log.enums.LogTypeEnum;
+import org.wiulus.spring.cloud.commons.tools.utils.HttpContextUtils;
+import org.wiulus.spring.cloud.commons.tools.utils.IpUtils;
+import org.wiulus.spring.cloud.commons.tools.utils.Result;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -41,10 +37,10 @@ import java.util.Map;
 @RestControllerAdvice
 public class CustomExceptionHandler {
     private static final Logger logger = LoggerFactory.getLogger(CustomExceptionHandler.class);
-    @Autowired
-    private ModuleConfig moduleConfig;
-    @Autowired
-    private RabbitMqSendService rabbitMqSendService;
+//    @Autowired
+//    private ModuleConfig moduleConfig;
+//    @Autowired
+//    private RabbitMqSendService rabbitMqSendService;
 
     /**
      * 处理自定义异常
@@ -71,19 +67,19 @@ public class CustomExceptionHandler {
         logger.error(ex.getMessage(), ex);
 
      HttpServletResponse response = HttpContextUtils.getHttpServletResponse();
-        if(ex instanceof ServiceException){
-            ServiceException serviceException=  (ServiceException)ex;
-            response.setStatus(500);
-            // 不能直接返回500 前端统一跳转到错误页面
-            return new Result().error(505, serviceException.getErrorCode().getCode(),serviceException.getMessage());
-        }else if(ex instanceof HystrixBadRequestException){
-            HystrixBadRequestException hystrixBadRequestException=  (HystrixBadRequestException)ex;
-            if(hystrixBadRequestException.getCause() instanceof ServiceException){
-                ServiceException serviceException = (ServiceException)hystrixBadRequestException.getCause();
-                return new Result().error(505, serviceException.getErrorCode().getCode(),serviceException.getMessage());
-            }
-
-        }
+//        if(ex instanceof ServiceException){
+//            ServiceException serviceException=  (ServiceException)ex;
+//            response.setStatus(500);
+//            // 不能直接返回500 前端统一跳转到错误页面
+//            return new Result().error(505, serviceException.getErrorCode().getCode(),serviceException.getMessage());
+//        }else if(ex instanceof HystrixBadRequestException){
+//            HystrixBadRequestException hystrixBadRequestException=  (HystrixBadRequestException)ex;
+//            if(hystrixBadRequestException.getCause() instanceof ServiceException){
+//                ServiceException serviceException = (ServiceException)hystrixBadRequestException.getCause();
+//                return new Result().error(505, serviceException.getErrorCode().getCode(),serviceException.getMessage());
+//            }
+//
+//        }
 
         saveLog(ex);
 
@@ -96,7 +92,8 @@ public class CustomExceptionHandler {
     private void saveLog(Exception ex) {
         SysLogError log = new SysLogError();
         log.setType(LogTypeEnum.ERROR.value());
-        log.setModule(moduleConfig.getName());
+        //TODO 打开注释
+//        log.setModule(moduleConfig.getName());
 
         //请求相关信息
         HttpServletRequest request = HttpContextUtils.getHttpServletRequest();
@@ -115,8 +112,8 @@ public class CustomExceptionHandler {
 
         //保存到Redis队列里
         log.setCreateDate(new Date());
-        //使用RabbitMQ发送消息进行日志处理
-        rabbitMqSendService.sendMsg(MqConstant.LEIMINGTECH_ADMIN_ERROR_LOG_QUEUE,
-                JSON.toJSONString(log));
+        //TODO 使用RabbitMQ发送消息进行日志处理
+//        rabbitMqSendService.sendMsg(MqConstant.LEIMINGTECH_ADMIN_ERROR_LOG_QUEUE,
+//                JSON.toJSONString(log));
     }
 }

@@ -127,10 +127,10 @@ public abstract class BaseServiceImpl<M extends BaseMapper<T>, T> implements Bas
 
     /**
      * @param ids:主键数组
-     * @Author: LX 17839193044@162.com
-     * @Description: mybatisplus逻辑删除（推荐使用）
-     * @Date: 2019/5/16 16:34
-     * @Version: V1.0
+     * @author : m13886933623@163.com
+     * @Description : mybatisplus逻辑删除（推荐使用）
+     * @Date : 2019/5/16 16:34
+     * @version : V1.0
      */
     @Override
     @Transactional(rollbackFor = Exception.class)
