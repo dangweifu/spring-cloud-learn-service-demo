@@ -8,10 +8,10 @@
 
 package org.wiulus.spring.cloud.commons.tools.validator;
 
-import com.leimingtech.commons.tools.exception.CustomException;
 import org.hibernate.validator.messageinterpolation.ResourceBundleMessageInterpolator;
 import org.springframework.context.support.ResourceBundleMessageSource;
 import org.springframework.validation.beanvalidation.MessageSourceResourceBundleLocator;
+import org.wiulus.spring.cloud.commons.tools.exception.CustomException;
 
 import javax.validation.ConstraintViolation;
 import javax.validation.Validation;

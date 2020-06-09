@@ -6,7 +6,8 @@
 
 package org.wiulus.spring.cloud.commons.tools.utils;
 
-import com.leimingtech.commons.tools.validator.AssertUtils;
+
+import org.wiulus.spring.cloud.commons.tools.validator.AssertUtils;
 
 import java.util.ArrayList;
 import java.util.LinkedHashMap;

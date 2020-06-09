@@ -11,9 +11,9 @@ package org.wiulus.spring.cloud.commons.tools.validator;
 import cn.hutool.core.collection.CollUtil;
 import cn.hutool.core.map.MapUtil;
 import cn.hutool.core.util.ArrayUtil;
-import com.leimingtech.commons.tools.exception.CustomException;
-import com.leimingtech.commons.tools.exception.ErrorCode;
 import org.apache.commons.lang3.StringUtils;
+import org.wiulus.spring.cloud.commons.tools.exception.CustomException;
+import org.wiulus.spring.cloud.commons.tools.exception.ErrorCode;
 
 import java.util.List;
 import java.util.Map;

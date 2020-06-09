@@ -6,10 +6,10 @@
 
 package org.wiulus.spring.cloud.commons.tools.utils;
 
-import com.leimingtech.commons.tools.exception.ErrorCode;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
+import org.wiulus.spring.cloud.commons.tools.exception.ErrorCode;
 
 import java.io.Serializable;
 

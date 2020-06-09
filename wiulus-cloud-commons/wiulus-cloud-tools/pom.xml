@@ -16,10 +16,10 @@
 
 
     <dependencies>
-        <dependency>
-            <groupId>org.wiulus.one</groupId>
-            <artifactId>wiulus-cloud-logs</artifactId>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.wiulus.one</groupId>-->
+<!--            <artifactId>wiulus-cloud-logs</artifactId>-->
+<!--        </dependency>-->
         <dependency>
             <groupId>org.wiulus.one</groupId>
             <artifactId>wiulus-cloud-core</artifactId>
