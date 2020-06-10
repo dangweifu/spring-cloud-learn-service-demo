@@ -3,7 +3,7 @@ package org.wiulus.spring.cloud.commons.tools.annotation;
 import java.lang.annotation.*;
 
 /**
- * @author : SWH ab4856812@163.com
+ * @author : WiuLuS m13886933623@163.com
  * @Description :
  * @Date : 2019/6/29 18:37
  * @version : V1.0

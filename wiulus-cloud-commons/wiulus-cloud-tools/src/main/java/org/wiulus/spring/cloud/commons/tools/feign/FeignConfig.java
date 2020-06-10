@@ -1,7 +1,7 @@
 /**
  *
  *
- * https://www.leimingtech.com
+ * https://www.wiulus.com
  *
  * 版权所有，侵权必究！
  */
@@ -21,8 +21,8 @@ import java.util.Enumeration;
 /**
  * Feign调用，携带header
  *
- * @author Mark sunlightcs@gmail.com
- * @since 1.0.0
+ * @author : WiuLuS
+ * @Version : 1.0
  */
 @Configuration
 public class FeignConfig implements RequestInterceptor {

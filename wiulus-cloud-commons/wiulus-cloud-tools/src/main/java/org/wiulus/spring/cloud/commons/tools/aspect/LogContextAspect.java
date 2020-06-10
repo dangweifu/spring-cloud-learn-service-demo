@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 import org.wiulus.spring.cloud.commons.tools.utils.SdkLogUtils;
 
 /**
- * @author : SWH ab4856812@163.com
+ * @author : WiuLuS m13886933623@163.com
  * @Description :
  * @Date : 2019/7/1 10:53
  * @version : V1.0
@@ -19,7 +19,7 @@ import org.wiulus.spring.cloud.commons.tools.utils.SdkLogUtils;
 @Component
 public class LogContextAspect {
 
-    @Pointcut("@annotation(com.leimingtech.commons.tools.annotation.LogContext)")
+    @Pointcut("@annotation(org.wiulus.spring.cloud.commons.tools.annotation.LogContext)")
     public void sdkLog() {
     }
 

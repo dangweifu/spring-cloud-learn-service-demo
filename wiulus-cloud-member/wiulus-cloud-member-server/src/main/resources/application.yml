@@ -1,0 +1,107 @@
+server:
+  port: 8184
+  servlet:
+    context-path: /member
+  # 配置不限制port请求header大小
+  max-http-header-size: 0
+
+wiulus:
+  system:
+    id: WLSS05
+
+spring:
+  application:
+    name: wiulus-member-server
+  #环境 dev|test|prod
+  profiles:
+    active: @active@
+  messages:
+    encoding: UTF-8
+    basename: i18n/messages_common
+  jackson:
+    time-zone: GMT+8
+    date-format: yyyy-MM-dd HH:mm:ss
+  sleuth:
+    sampler:
+      probability: 1.0
+  flyway:
+    enabled: false
+    check-location: true
+    baseline-on-migrate: true
+    validate-on-migrate: true
+    # flyway的clean命令会删除指定schema下的所有 table, 杀伤力太大了, 应该禁掉.
+    clean-disabled: true
+    baseline-version: 1.0
+    locations: classpath:db/migration
+    table: schema_version
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS
+
+mybatis-plus:
+  mapper-locations: classpath:/org/wiulus/**/*.xml
+  #实体扫描，多个package用逗号或者分号分隔
+  #  typeAliasesPackage: org.wiulus.spring.cloud.user.entity
+  global-config:
+    #数据库相关配置
+    db-config:
+      #主键类型  AUTO:"数据库ID自增", INPUT:"用户输入ID", ID_WORKER:"全局唯一ID (数字类型唯一ID)", UUID:"全局唯一ID UUID";
+      id-type: ID_WORKER
+      #字段策略 IGNORED:"忽略判断",NOT_NULL:"非 NULL 判断"),NOT_EMPTY:"非空判断"
+      field-strategy: NOT_NULL
+      #驼峰下划线转换
+      column-underline: true
+      #db-type: mysql
+    banner: false
+  #原生配置
+  configuration:
+    map-underscore-to-camel-case: true
+    cache-enabled: false
+    call-setters-on-nulls: true
+    jdbc-type-for-null: 'null'
+  mybatis-plus:
+    global-config:
+      db-config:
+        logic-delete-value: 1 # 逻辑已删除值(默认为 1)
+        logic-not-delete-value: 0 # 逻辑未删除值(默认为 0)
+#启用feign的熔断器
+feign:
+  hystrix:
+    enabled: true
+
+#配置熔断连接超时时间
+hystrix:
+  propagate:
+    request-attribute:
+      enabled: true
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 30000 #缺省为1000
+          #hystrix配置单线程策略
+          strategy: SEMAPHORE
+          #增加并发量设置（默认是10）
+          semaphore:
+            maxConcurrentRequests: 300
+
+#fegin连接超时时间
+ribbon:
+  ReadTimeout: 10000   #负载均衡超时时间，默认值5000
+  ConnectTimeout: 4000 #ribbon请求连接的超时时间，默认值2000
+
+#微信配置
+wechat:
+  appid: wx28aa3e0a0346138f
+  secret: 648b795319bb803bc38f2c7730f19541
+
+# jasypt加密秘钥
+jasypt:
+  encryptor:
+    password: Wiulus506JasyptKey

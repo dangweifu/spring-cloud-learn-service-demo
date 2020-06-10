@@ -1,7 +1,7 @@
 /**
  *
  *
- * https://www.leimingtech.com
+ * https://www.wiulus.com
  *
  * 版权所有，侵权必究！
  */
@@ -24,8 +24,8 @@ import java.util.List;
 /**
  * mybatis-plus配置
  *
- * @author Mark sunlightcs@gmail.com
- * @since 1.0.0
+ * @author : WiuLuS
+ * @Version : 1.0
  */
 @Configuration
 public class MybatisPlusConfig {

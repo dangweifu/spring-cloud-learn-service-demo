@@ -10,7 +10,7 @@ import java.io.*;
  * 功能描述：
  * <base64文件转MultipartFile>
  *
- * @author 刘远杰
+ * @author WiuLuS
  * @version 7.0
  * @Date 2019/6/10 15:43
  **/

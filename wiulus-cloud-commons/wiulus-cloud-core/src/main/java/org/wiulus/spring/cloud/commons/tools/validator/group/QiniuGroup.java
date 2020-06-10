@@ -11,8 +11,8 @@ package org.wiulus.spring.cloud.commons.tools.validator.group;
 /**
  * 七牛
  *
- * @author Mark sunlightcs@gmail.com
- * @since 1.0.0
+ * @author : WiuLuS
+ * @Version : 1.0
  */
 public interface QiniuGroup {
 }

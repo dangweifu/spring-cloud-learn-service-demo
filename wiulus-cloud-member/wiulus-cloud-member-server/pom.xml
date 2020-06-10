@@ -10,50 +10,50 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>wiulus-cloud-member-server</artifactId>
-
+    <version>1.0-SNAPSHOT</version>
 
     <dependencies>
 <!--        <dependency>-->
-<!--            <groupId>com.leimingtech</groupId>-->
-<!--            <artifactId>leimingtech-activity-client</artifactId>-->
+<!--            <groupId>org.wiulus.one</groupId>-->
+<!--            <artifactId>wiulus-cloud-activity-client</artifactId>-->
 <!--        </dependency>-->
 <!--        <dependency>-->
-<!--            <groupId>com.leimingtech</groupId>-->
-<!--            <artifactId>leimingtech-upload-client</artifactId>-->
+<!--            <groupId>org.wiulus.one</groupId>-->
+<!--            <artifactId>wiulus-cloud-upload-client</artifactId>-->
+<!--        </dependency>-->
+        <dependency>
+            <groupId>org.wiulus.one</groupId>
+            <artifactId>wiulus-cloud-member-client</artifactId>
+        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.wiulus.one</groupId>-->
+<!--            <artifactId>wiulus-cloud-message-client</artifactId>-->
 <!--        </dependency>-->
 <!--        <dependency>-->
-<!--            <groupId>com.leimingtech</groupId>-->
-<!--            <artifactId>leimingtech-member-client</artifactId>-->
+<!--            <groupId>org.wiulus.one</groupId>-->
+<!--            <artifactId>wiulus-cloud-sys-client</artifactId>-->
 <!--        </dependency>-->
 <!--        <dependency>-->
-<!--            <groupId>com.leimingtech</groupId>-->
-<!--            <artifactId>leimingtech-message-client</artifactId>-->
+<!--            <groupId>org.wiulus.one</groupId>-->
+<!--            <artifactId>wiulus-cloud-order-client</artifactId>-->
 <!--        </dependency>-->
 <!--        <dependency>-->
-<!--            <groupId>com.leimingtech</groupId>-->
-<!--            <artifactId>leimingtech-sys-client</artifactId>-->
-<!--        </dependency>-->
-<!--        <dependency>-->
-<!--            <groupId>com.leimingtech</groupId>-->
-<!--            <artifactId>leimingtech-order-client</artifactId>-->
-<!--        </dependency>-->
-<!--        <dependency>-->
-<!--            <groupId>com.leimingtech</groupId>-->
-<!--            <artifactId>leimingtech-goods-client</artifactId>-->
+<!--            <groupId>org.wiulus.one</groupId>-->
+<!--            <artifactId>wiulus-cloud-goods-client</artifactId>-->
 <!--        </dependency>-->
 
 <!--        <dependency>-->
-<!--            <groupId>com.leimingtech</groupId>-->
-<!--            <artifactId>leimingtech-third-party-client</artifactId>-->
+<!--            <groupId>org.wiulus.one</groupId>-->
+<!--            <artifactId>wiulus-cloud-third-party-client</artifactId>-->
 <!--        </dependency>-->
-<!--        <dependency>-->
-<!--            <groupId>com.leimingtech</groupId>-->
-<!--            <artifactId>leimingtech-commons-dynamic-datasource</artifactId>-->
-<!--        </dependency>-->
-<!--        <dependency>-->
-<!--            <groupId>com.leimingtech</groupId>-->
-<!--            <artifactId>leimingtech-commons-mybatis</artifactId>-->
-<!--        </dependency>-->
+        <dependency>
+            <groupId>org.wiulus.one</groupId>
+            <artifactId>wiulus-cloud-dynamic-datasource</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.wiulus.one</groupId>
+            <artifactId>wiulus-cloud-mybatis</artifactId>
+        </dependency>
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -95,9 +95,9 @@
             <groupId>com.github.ulisesbocchio</groupId>
             <artifactId>jasypt-spring-boot-starter</artifactId>
         </dependency>
-<!--        <dependency>-->
-<!--            <groupId>com.leimingtech</groupId>-->
-<!--            <artifactId>leimingtech-cart-client</artifactId>-->
+        <!--        <dependency>-->
+<!--            <groupId>org.wiulus.one</groupId>-->
+<!--            <artifactId>wiulus-cloud-cart-client</artifactId>-->
 <!--        </dependency>-->
     </dependencies>
 
@@ -115,40 +115,40 @@
                     <skipTests>true</skipTests>
                 </configuration>
             </plugin>
-            <plugin>
-                <groupId>com.spotify</groupId>
-                <artifactId>docker-maven-plugin</artifactId>
-                <configuration>
-                    <imageName>${project.artifactId}</imageName>
-                    <dockerDirectory>${project.basedir}/src/main/docker</dockerDirectory>
-                    <dockerHost>http://192.168.1.108:2375</dockerHost>
-                    <resources>
-                        <resource>
-                            <targetPath>/</targetPath>
-                            <directory>${project.build.directory}</directory>
-                            <include>${project.build.finalName}-${project.version}.zip</include>
-                        </resource>
-                    </resources>
-                </configuration>
-            </plugin>
-            <plugin>
-                <artifactId>maven-assembly-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>single</goal>
-                        </goals>
-                        <configuration>
-                            <finalName>${project.build.finalName}-${project.version}</finalName>
-                            <appendAssemblyId>false</appendAssemblyId>
-                            <descriptors>
-                                <descriptor>src/assembly/assembly-descriptor.xml</descriptor>
-                            </descriptors>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
+<!--            <plugin>-->
+<!--                <groupId>com.spotify</groupId>-->
+<!--                <artifactId>docker-maven-plugin</artifactId>-->
+<!--                <configuration>-->
+<!--                    <imageName>${project.artifactId}</imageName>-->
+<!--                    <dockerDirectory>${project.basedir}/src/main/docker</dockerDirectory>-->
+<!--                    <dockerHost>http://192.168.1.108:2375</dockerHost>-->
+<!--                    <resources>-->
+<!--                        <resource>-->
+<!--                            <targetPath>/</targetPath>-->
+<!--                            <directory>${project.build.directory}</directory>-->
+<!--                            <include>${project.build.finalName}-${project.version}.zip</include>-->
+<!--                        </resource>-->
+<!--                    </resources>-->
+<!--                </configuration>-->
+<!--            </plugin>-->
+<!--            <plugin>-->
+<!--                <artifactId>maven-assembly-plugin</artifactId>-->
+<!--                <executions>-->
+<!--                    <execution>-->
+<!--                        <phase>package</phase>-->
+<!--                        <goals>-->
+<!--                            <goal>single</goal>-->
+<!--                        </goals>-->
+<!--                        <configuration>-->
+<!--                            <finalName>${project.build.finalName}-${project.version}</finalName>-->
+<!--                            <appendAssemblyId>false</appendAssemblyId>-->
+<!--                            <descriptors>-->
+<!--                                <descriptor>src/assembly/assembly-descriptor.xml</descriptor>-->
+<!--                            </descriptors>-->
+<!--                        </configuration>-->
+<!--                    </execution>-->
+<!--                </executions>-->
+<!--            </plugin>-->
         </plugins>
     </build>
 

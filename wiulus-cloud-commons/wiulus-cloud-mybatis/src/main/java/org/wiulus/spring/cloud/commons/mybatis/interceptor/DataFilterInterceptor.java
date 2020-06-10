@@ -1,7 +1,7 @@
 /**
  *
  *
- * https://www.leimingtech.com
+ * https://www.wiulus.com
  *
  * 版权所有，侵权必究！
  */
@@ -27,8 +27,8 @@ import java.util.Properties;
 /**
  * 数据过滤
  *
- * @author Mark sunlightcs@gmail.com
- * @since 1.0.0
+ * @author : WiuLuS
+ * @Version : 1.0
  */
 @Intercepts({@Signature(type = StatementHandler.class, method = "prepare", args = {Connection.class, Integer.class})})
 public class DataFilterInterceptor extends AbstractSqlParserHandler implements Interceptor {

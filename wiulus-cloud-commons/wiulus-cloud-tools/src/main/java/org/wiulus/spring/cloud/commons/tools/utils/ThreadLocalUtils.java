@@ -5,7 +5,7 @@ import org.wiulus.spring.cloud.commons.tools.annotation.LogContext;
 import org.wiulus.spring.cloud.commons.tools.annotation.LogContextParam;
 
 /**
- * @author : SWH ab4856812@163.com
+ * @author : WiuLuS m13886933623@163.com
  * @Description :
  * @Date : 2019/6/29 18:54
  * @version : V1.0

@@ -1,7 +1,7 @@
 /**
  *
  * <p>
- * https://www.leimingtech.com
+ * https://www.wiulus.com
  * <p>
  * 版权所有，侵权必究！
  */
@@ -17,7 +17,7 @@ import java.util.Map;
 /**
  *  CRUD基础服务接口
  *
- * @author Mark sunlightcs@gmail.com
+ * @author : WiuLuS
  */
 public interface CrudService<T, D> extends BaseService<T> {
 

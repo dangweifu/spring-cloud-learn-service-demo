@@ -14,8 +14,8 @@ package org.wiulus.spring.cloud.commons.tools.exception;
  * 如：10001（10代表系统模块，001代表业务代码）
  * </p>
  *
- * @author Mark sunlightcs@gmail.com
- * @since 1.0.0
+ * @author : WiuLuS
+ * @Version : 1.0
  */
 public interface ErrorCode {
     int SUCCESS = 200;

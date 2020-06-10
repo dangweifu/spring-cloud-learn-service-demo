@@ -1,5 +1,5 @@
 /**
- * https://www.leimingtech.com
+ * https://www.wiulus.com
  * <p>
  * 版权所有，侵权必究！
  */
@@ -18,7 +18,7 @@ import java.util.List;
  * @Date : 2019/6/26 14:54
  * @version : V1.0
  */
-@Date
+@Data
 public class SellerDetail implements Serializable {
 
     private static final long serialVersionUID = 8628341772498364793L;

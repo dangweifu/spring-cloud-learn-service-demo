@@ -16,10 +16,10 @@ import java.io.Serializable;
 /**
  * 响应数据
  *
- * @author Mark sunlightcs@gmail.com
- * @since 1.0.0
+ * @author : WiuLuS
+ * @Version : 1.0
  */
-@Date
+@Data
 @ApiModel(description = "Result")
 public class Result<T> implements Serializable {
     private static final long serialVersionUID = 1L;

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <property name="SYSTEM_ID" value="WLSS05"/>
+    <springProperty scope="context" name="LOG_FORMAT" source="wiulus.log.format"/>
+    <springProperty scope="context" name="LOG_PATH" source="wiulus.log.file-path"/>
+    <include resource="org/wiulus/spring/cloud/logs/logging/logback-default.xml"/>
+    <root level="INFO">
+        <appender-ref ref="FILE"/>
+
+        <!-- 取消日志打印到控制台 -->
+        <appender-ref ref="CONSOLE"/>
+    </root>
+</configuration>

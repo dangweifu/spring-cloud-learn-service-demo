@@ -14,8 +14,8 @@ import java.util.List;
 /**
  * 树节点，所有需要实现树节点的，都需要继承该类
  *
- * @author Mark sunlightcs@gmail.com
- * @since 1.0.0
+ * @author : WiuLuS
+ * @Version : 1.0
  */
 public class TreeNode<T> implements Serializable {
     private static final long serialVersionUID = 1L;

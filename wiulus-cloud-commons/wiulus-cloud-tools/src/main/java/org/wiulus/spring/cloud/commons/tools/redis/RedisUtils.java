@@ -1,5 +1,5 @@
 /**
- * https://www.leimingtech.com
+ * https://www.wiulus.com
  * <p>
  * 版权所有，侵权必究！
  */
@@ -19,9 +19,9 @@ import java.util.concurrent.TimeUnit;
 /**
  * Redis工具类
  *
- * @author Mark sunlightcs@gmail.com
+ * @author : WiuLuS
  * @Update： LX 增加方式注释
- * @since 1.0.0
+ * @Version : 1.0
  */
 public class RedisUtils {
 

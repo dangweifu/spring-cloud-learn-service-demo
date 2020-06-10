@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="org.wiulus.spring.cloud.modules.dao.member.MemberInfoDao">
+
+    <resultMap type="org.wiulus.spring.cloud.modules.entity.member.MemberInfoEntity" id="memberInfoMap">
+        <result property="id" column="id"/>
+        <result property="memberId" column="member_id"/>
+        <result property="paymentPasswd" column="payment_passwd"/>
+        <result property="consumePoint" column="consume_point"/>
+        <result property="availablePoint" column="available_point"/>
+        <result property="gradePoint" column="grade_point"/>
+        <result property="memberAreaId" column="member_areaid"/>
+        <result property="memberCityId" column="member_cityid"/>
+        <result property="memberProvinceId" column="member_provinceid"/>
+        <result property="stressId" column="stress_id"/>
+        <result property="memberAreainfo" column="member_areainfo"/>
+        <result property="creator" column="creator"/>
+        <result property="createDate" column="create_date"/>
+        <result property="updater" column="updater"/>
+        <result property="updateDate" column="update_date"/>
+        <result property="delFlag" column="del_flag"/>
+        <result property="version" column="version"/>
+    </resultMap>
+
+    <!--根据用户名修改-->
+    <update id="updateByMemberId" parameterType="org.wiulus.spring.cloud.modules.dto.member.MemberUpdateDTO">
+        update wls_shop_member_info
+        <set>
+            <if test="memberProvinceId != null and memberProvinceId !=''">
+                member_areaid=#{memberProvinceId},
+            </if>
+            <if test="memberCityId != null and memberCityId !=''">
+                member_cityid=#{memberCityId},
+            </if>
+            <if test="memberAreaId != null and memberAreaId !=''">
+                member_provinceid=#{memberAreaId},
+            </if>
+            <if test="availablePoint != null">
+                available_point = available_point + #{availablePoint},
+            </if>
+            <if test="gradePoint != null">
+                grade_point = grade_point + #{gradePoint},
+            </if>
+        </set>
+        where member_id=#{id} and del_flag = 0
+    </update>
+
+    <!-- lixiang 2019/12/26 10:39 修改会员成长值-->
+    <update id="updateGradePoint">
+        update wls_shop_member_info
+        <set>
+            <if test="gradePoint != null">
+                grade_point = #{gradePoint},
+            </if>
+        </set>
+        where member_id=#{memberId} and del_flag = 0
+    </update>
+
+
+    <!--根据等级积分获取人数-->
+    <select id="selectMemberNum" resultType="java.lang.Long">
+        select count(id) from wls_shop_member_info where grade_point >= #{min} and grade_point <![CDATA[ < ]]> #{max}
+    </select>
+
+</mapper>

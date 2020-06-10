@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="org.wiulus.spring.cloud.modules.dao.invoice.InvoiceDao">
+
+    <resultMap type="org.wiulus.spring.cloud.modules.dto.invoice.InvoiceDTO" id="invoiceMap">
+        <result property="id" column="id"/>
+        <result property="memberId" column="member_id"/>
+        <result property="invState" column="inv_state"/>
+        <result property="invType" column="inv_type"/>
+        <result property="invCompany" column="inv_company"/>
+        <result property="invPersonal" column="inv_personal"/>
+        <result property="invCode" column="inv_code"/>
+        <result property="invRegAddr" column="inv_reg_addr"/>
+        <result property="invRegPhone" column="inv_reg_phone"/>
+        <result property="invRegBname" column="inv_reg_bname"/>
+        <result property="invRegBaccount" column="inv_reg_baccount"/>
+        <result property="invRecName" column="inv_rec_name"/>
+        <result property="invRecMobile" column="inv_rec_mobile"/>
+        <result property="invRecProvince" column="inv_rec_province"/>
+        <result property="invRecAddr" column="inv_rec_addr"/>
+        <result property="invRecEmail" column="inv_rec_email"/>
+        <result property="isDefault" column="is_default"/>
+        <result property="auditStatus" column="audit_status"/>
+        <result property="delFag" column="del_flag"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        m.id,
+        m.member_id,
+        m.inv_state,
+        m.inv_type,
+        m.inv_company,
+        m.inv_personal,
+        m.inv_code,
+        m.inv_reg_addr,
+        m.inv_reg_phone,
+        m.inv_reg_bname,
+        m.inv_reg_baccount,
+        m.inv_rec_name,
+        m.inv_rec_mobile,
+        m.inv_rec_province,
+        m.inv_rec_addr,
+        m.inv_rec_email,
+        m.is_default,
+        m.audit_status
+    </sql>
+
+    <!--修改当前用户下的发票都为不是默认-->
+    <update id="updateDefault" parameterType="java.lang.Long">
+        update wls_shop_invoice
+        <set>
+            is_default = 0
+        </set>
+        where member_id = #{memberId}
+    </update>
+
+    <select id="findByMemberId" resultMap="invoiceMap" parameterType="java.lang.Long">
+        select
+        <include refid="Base_Column_List"/>
+        from wls_shop_invoice m
+        where m.member_id = #{memberId}
+        and m.del_flag = 0 order by m.id desc limit 1
+    </select>
+
+</mapper>

@@ -1,5 +1,5 @@
 /**
- * https://www.leimingtech.com
+ * https://www.wiulus.com
  * <p>
  * 版权所有，侵权必究！
  */
@@ -10,7 +10,7 @@ import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.module.SimpleModule;
 import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
-import org.springframework.beans.factory.annotation.Autowired;
+import javax.annotation.Resource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.converter.ByteArrayHttpMessageConverter;
@@ -33,15 +33,15 @@ import java.util.TimeZone;
 /**
  * MVC配置
  *
- * @author Mark sunlightcs@gmail.com
- * @since 1.0.0
+ * @author : WiuLuS
+ * @Version : 1.0
  */
 @Configuration
 public class WebMvcConfig implements WebMvcConfigurer {
-    @Autowired
+    @Resource
     private UserDetailHandlerMethodArgumentResolver userDetailHandlerMethodArgumentResolver;
 
-    @Autowired
+    @Resource
     private SellerDetailHandlerMethodArgumentResolver sellerDetailHandlerMethodArgumentResolver;
 
     @Override

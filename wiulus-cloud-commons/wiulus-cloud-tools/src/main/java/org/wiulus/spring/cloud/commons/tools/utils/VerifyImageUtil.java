@@ -19,7 +19,7 @@ import java.util.Iterator;
 import java.util.Map;
 
 /**
- * @author : SWH ab4856812@163.com
+ * @author : WiuLuS m13886933623@163.com
  * @Description : 滑块验证工具类
  * @Date : 2019/7/15 18:02
  * @version : V1.0

@@ -1,7 +1,7 @@
 /**
  *
  *
- * https://www.leimingtech.com
+ * https://www.wiulus.com
  *
  * 版权所有，侵权必究！
  */
@@ -13,8 +13,8 @@ import java.lang.annotation.*;
 /**
  * 操作日志注解
  *
- * @author Mark sunlightcs@gmail.com
- * @since 1.0.0
+ * @author : WiuLuS
+ * @Version : 1.0
  */
 @Target(ElementType.METHOD)
 @Retention(RetentionPolicy.RUNTIME)

@@ -1,7 +1,7 @@
 /**
  *
  *
- * https://www.leimingtech.com
+ * https://www.wiulus.com
  *
  * 版权所有，侵权必究！
  */
@@ -16,7 +16,7 @@ import java.util.Date;
 /**
  * 日期转换
  *
- * @author Mark sunlightcs@gmail.com
+ * @author : WiuLuS
  */
 @Component
 public class DateConverter implements Converter<String, Date> {

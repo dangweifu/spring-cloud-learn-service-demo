@@ -1,5 +1,5 @@
 /**
- * https://www.leimingtech.com
+ * https://www.wiulus.com
  * <p>
  * 版权所有，侵权必究！
  */
@@ -11,7 +11,7 @@ import com.alibaba.fastjson.JSON;
 import com.netflix.hystrix.exception.HystrixBadRequestException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
+import javax.annotation.Resource;
 import org.springframework.dao.DuplicateKeyException;
 import org.springframework.http.HttpHeaders;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -31,15 +31,15 @@ import java.util.Map;
 /**
  * 异常处理器
  *
- * @author Mark sunlightcs@gmail.com
- * @since 1.0.0
+ * @author : WiuLuS
+ * @Version : 1.0
  */
 @RestControllerAdvice
 public class CustomExceptionHandler {
     private static final Logger logger = LoggerFactory.getLogger(CustomExceptionHandler.class);
-//    @Autowired
+//    @Resource
 //    private ModuleConfig moduleConfig;
-//    @Autowired
+//    @Resource
 //    private RabbitMqSendService rabbitMqSendService;
 
     /**
@@ -113,7 +113,7 @@ public class CustomExceptionHandler {
         //保存到Redis队列里
         log.setCreateDate(new Date());
         //TODO 使用RabbitMQ发送消息进行日志处理
-//        rabbitMqSendService.sendMsg(MqConstant.LEIMINGTECH_ADMIN_ERROR_LOG_QUEUE,
+//        rabbitMqSendService.sendMsg(MqConstant.WIULUS_ADMIN_ERROR_LOG_QUEUE,
 //                JSON.toJSONString(log));
     }
 }

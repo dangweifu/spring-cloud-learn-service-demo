@@ -22,7 +22,7 @@ public class EasyExcelUtils {
   * 导出excel到指定目录
   *
   * @author 宋文豪
-  * @email: songwenhao@leimingtech.com
+  * @email: songwenhao@wiulus.com
   * @Date : 2020/3/10
   **/
 
@@ -92,7 +92,7 @@ public class EasyExcelUtils {
       *  同时判断到处路径是否存在如果不存在则创建
       *
       * @author 宋文豪
-      * @email: songwenhao@leimingtech.com
+      * @email: songwenhao@wiulus.com
       * @Date : 2020/3/10
       **/
 

@@ -1,5 +1,5 @@
 /**
- * https://www.leimingtech.com
+ * https://www.wiulus.com
  * <p>
  * 版权所有，侵权必究！
  */
@@ -18,8 +18,8 @@ import org.wiulus.spring.cloud.commons.tools.security.user.UserDetail;
 /**
  * 当前登录用户
  *
- * @author Mark sunlightcs@gmail.com
- * @since 1.0.0
+ * @author : WiuLuS
+ * @Version : 1.0
  */
 @Component
 public class UserDetailHandlerMethodArgumentResolver implements HandlerMethodArgumentResolver {

@@ -1,5 +1,5 @@
 /**
- * https://www.leimingtech.com
+ * https://www.wiulus.com
  * <p>
  * 版权所有，侵权必究！
  */
@@ -17,7 +17,7 @@ import com.baomidou.mybatisplus.extension.toolkit.SqlHelper;
 import org.apache.ibatis.binding.MapperMethod;
 import org.apache.ibatis.session.SqlSession;
 import org.mybatis.spring.SqlSessionUtils;
-import org.springframework.beans.factory.annotation.Autowired;
+import javax.annotation.Resource;
 import org.springframework.transaction.annotation.Transactional;
 import org.wiulus.spring.cloud.commons.mybatis.service.BaseService;
 import org.wiulus.spring.cloud.commons.mybatis.utils.EntityUtils;
@@ -33,11 +33,11 @@ import java.util.Map;
 /**
  * 基础服务类，所有Service都要继承
  *
- * @author Mark sunlightcs@gmail.com
- * @since 1.0.0
+ * @author : WiuLuS
+ * @Version : 1.0
  */
 public abstract class BaseServiceImpl<M extends BaseMapper<T>, T> implements BaseService<T> {
-    @Autowired
+    @Resource
     protected M baseDao;
 
     /**
@@ -180,9 +180,6 @@ public abstract class BaseServiceImpl<M extends BaseMapper<T>, T> implements Bas
 
     /**
      * 获取SqlStatement
-     *
-     * @param sqlMethod
-     * @return
      */
     protected String sqlStatement(SqlMethod sqlMethod) {
         return SqlHelper.table(currentModelClass()).getSqlStatement(sqlMethod.getMethod());

@@ -7,7 +7,7 @@ import lombok.Getter;
  * excel导出枚举
  *
  * @author 宋文豪
- * @email: songwenhao@leimingtech.com
+ * @email: songwenhao@wiulus.com
  * @Date : 2020/3/10
  **/
 

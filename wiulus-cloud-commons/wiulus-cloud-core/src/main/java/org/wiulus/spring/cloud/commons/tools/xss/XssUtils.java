@@ -13,8 +13,8 @@ import org.jsoup.safety.Whitelist;
 /**
  * XSS过滤工具类
  *
- * @author Mark sunlightcs@gmail.com
- * @since 1.0.0
+ * @author : WiuLuS
+ * @Version : 1.0
  */
 public class XssUtils extends Whitelist {
 

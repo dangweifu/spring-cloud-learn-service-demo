@@ -85,11 +85,11 @@
         <base.mq.version>1.0-SNAPSHOT</base.mq.version>
         <base.message.version>1.0-SNAPSHOT</base.message.version>
         <cart.version>1.0-SNAPSHOT</cart.version>
-        <leiming.elasticsearch.version>1.0-SNAPSHOT</leiming.elasticsearch.version>
+        <wiulus.elasticsearch.version>1.0-SNAPSHOT</wiulus.elasticsearch.version>
         <goods.version>1.0-SNAPSHOT</goods.version>
         <index.sync.version>1.0-SNAPSHOT</index.sync.version>
         <logistics.version>1.0-SNAPSHOT</logistics.version>
-        <leimingtech.log.version>1.0-SNAPSHOT</leimingtech.log.version>
+        <wiulus.log.version>1.0-SNAPSHOT</wiulus.log.version>
         <member.version>1.0-SNAPSHOT</member.version>
         <nosql.version>1.0-SNAPSHOT</nosql.version>
         <operation.version>1.0-SNAPSHOT</operation.version>
@@ -103,7 +103,7 @@
         <admin.auth.version>1.0-SNAPSHOT</admin.auth.version>
         <front.auth.version>1.0-SNAPSHOT</front.auth.version>
         <sys.version>1.0-SNAPSHOT</sys.version>
-        <leimingtech.mongodb.version>1.0-SNAPSHOT</leimingtech.mongodb.version>
+        <wiulus.mongodb.version>1.0-SNAPSHOT</wiulus.mongodb.version>
         <commons.datasource.version>1.0-SNAPSHOT</commons.datasource.version>
         <commons.mybatis.version>1.0-SNAPSHOT</commons.mybatis.version>
         <commons.tools.version>1.0-SNAPSHOT</commons.tools.version>
@@ -170,7 +170,7 @@
 <!--            <dependency>-->
 <!--                <groupId>org.wiulus.one</groupId>-->
 <!--                <artifactId>wiulus-cloud-mongodb</artifactId>-->
-<!--                <version>${leimingtech.mongodb.version}</version>-->
+<!--                <version>${wiulus.mongodb.version}</version>-->
 <!--            </dependency>-->
 
             <!-- 购物车模块 -->
@@ -184,7 +184,7 @@
 <!--            <dependency>-->
 <!--                <groupId>org.wiulus.one</groupId>-->
 <!--                <artifactId>wiulus-cloud-elasticsearch</artifactId>-->
-<!--                <version>${leiming.elasticsearch.version}</version>-->
+<!--                <version>${wiulus.elasticsearch.version}</version>-->
 <!--            </dependency>-->
 
 <!--            &lt;!&ndash; 商品模块 &ndash;&gt;-->
@@ -214,19 +214,19 @@
 <!--                <version>${logistics.version}</version>-->
 <!--            </dependency>-->
 
-<!--            &lt;!&ndash; 日志模块 &ndash;&gt;-->
-<!--            <dependency>-->
-<!--                <groupId>org.wiulus.one</groupId>-->
-<!--                <artifactId>wiulus-cloud-logs</artifactId>-->
-<!--                <version>${leimingtech.log.version}</version>-->
-<!--            </dependency>-->
+            <!-- 日志模块 -->
+            <dependency>
+                <groupId>org.wiulus.one</groupId>
+                <artifactId>wiulus-cloud-logs</artifactId>
+                <version>${wiulus.log.version}</version>
+            </dependency>
 
-<!--            &lt;!&ndash; 用户模块 &ndash;&gt;-->
-<!--            <dependency>-->
-<!--                <groupId>org.wiulus.one</groupId>-->
-<!--                <artifactId>wiulus-cloud-member-client</artifactId>-->
-<!--                <version>${member.version}</version>-->
-<!--            </dependency>-->
+            <!-- 用户模块 -->
+            <dependency>
+                <groupId>org.wiulus.one</groupId>
+                <artifactId>wiulus-cloud-member-client</artifactId>
+                <version>${member.version}</version>
+            </dependency>
 
 <!--            &lt;!&ndash; NoSQL模块 &ndash;&gt;-->
 <!--            <dependency>-->
@@ -637,6 +637,12 @@
                 <artifactId>kryo-shaded</artifactId>
                 <version>${kryo.shaded.version}</version>
             </dependency>
+            <dependency>
+                <groupId>org.yaml</groupId>
+                <artifactId>snakeyaml</artifactId>
+                <version>${snakeyaml.version}</version>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
 

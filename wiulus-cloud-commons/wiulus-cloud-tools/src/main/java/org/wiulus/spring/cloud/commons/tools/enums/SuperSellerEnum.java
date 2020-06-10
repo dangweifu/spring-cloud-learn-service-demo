@@ -1,5 +1,5 @@
 /**
- * https://www.leimingtech.com
+ * https://www.wiulus.com
  * <p>
  * 版权所有，侵权必究！
  */
@@ -9,8 +9,8 @@ package org.wiulus.spring.cloud.commons.tools.enums;
 /**
  * 超级商家管理员枚举
  *
- * @author Mark sunlightcs@gmail.com
- * @since 1.0.0
+ * @author : WiuLuS
+ * @Version : 1.0
  */
 public enum SuperSellerEnum {
 

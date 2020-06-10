@@ -18,10 +18,10 @@ import java.util.List;
 /**
  * 分页工具类
  *
- * @author Mark sunlightcs@gmail.com
- * @since 1.0.0
+ * @author : WiuLuS
+ * @Version : 1.0
  */
-@Date
+@Data
 @ApiModel(description = "PageData")
 public class PageData<T> implements Serializable {
     private static final long serialVersionUID = 1L;

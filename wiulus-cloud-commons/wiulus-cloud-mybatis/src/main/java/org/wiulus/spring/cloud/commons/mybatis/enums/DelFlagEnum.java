@@ -1,7 +1,7 @@
 /**
  *
  *
- * https://www.leimingtech.com
+ * https://www.wiulus.com
  *
  * 版权所有，侵权必究！
  */
@@ -11,8 +11,8 @@ package org.wiulus.spring.cloud.commons.mybatis.enums;
 /**
  * 删除标识枚举类
  *
- * @author Mark sunlightcs@gmail.com
- * @since 1.0.0
+ * @author : WiuLuS
+ * @Version : 1.0
  */
 public enum DelFlagEnum {
     NORMAL(0),

@@ -1,5 +1,5 @@
 /**
- * https://www.leimingtech.com
+ * https://www.wiulus.com
  * <p>
  * 版权所有，侵权必究！
  */
@@ -8,7 +8,7 @@ package org.wiulus.spring.cloud.commons.tools.redis;
 
 import cn.hutool.core.bean.BeanUtil;
 import cn.hutool.core.map.MapUtil;
-import org.springframework.beans.factory.annotation.Autowired;
+import javax.annotation.Resource;
 import org.springframework.stereotype.Component;
 import org.wiulus.spring.cloud.commons.tools.security.enums.UserKillEnum;
 import org.wiulus.spring.cloud.commons.tools.security.user.UserDetail;
@@ -18,12 +18,12 @@ import java.util.Map;
 /**
  * 用户Redis
  *
- * @author Mark sunlightcs@gmail.com
- * @since 1.0.0
+ * @author : WiuLuS
+ * @Version : 1.0
  */
 @Component
 public class UserDetailRedis {
-    @Autowired
+    @Resource
     private RedisUtils redisUtils;
 
     public void set(UserDetail user, long expire) {

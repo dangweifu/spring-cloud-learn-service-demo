@@ -1,5 +1,5 @@
 /**
- * https://www.leimingtech.com
+ * https://www.wiulus.com
  * <p>
  * 版权所有，侵权必究！
  */
@@ -15,7 +15,7 @@ import org.aspectj.lang.annotation.Pointcut;
 import org.aspectj.lang.reflect.MethodSignature;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
+import javax.annotation.Resource;
 import org.springframework.http.HttpHeaders;
 import org.springframework.stereotype.Component;
 import org.wiulus.spring.cloud.commons.tools.annotation.LogOperation;
@@ -34,8 +34,8 @@ import java.util.Date;
 /**
  * 操作日志，切面处理类
  *
- * @author Mark sunlightcs@gmail.com
- * @since 1.0.0
+ * @author : WiuLuS
+ * @Version : 1.0
  */
 @Aspect
 @Component
@@ -44,13 +44,13 @@ public class LogOperationAspect {
 
     private static Logger logger = LoggerFactory.getLogger(LogOperationAspect.class);
 
-//    @Autowired
+//    @Resource
 //    private ModuleConfig moduleConfig;
 
-//    @Autowired
+//    @Resource
 //    private RabbitMqSendService rabbitMqSendService;
 
-    @Pointcut("@annotation(com.leimingtech.commons.tools.annotation.LogOperation)")
+    @Pointcut("@annotation(org.wiulus.spring.cloud.commons.tools.annotation.LogOperation)")
     public void logPointCut() {
 
     }
@@ -118,7 +118,7 @@ public class LogOperationAspect {
             logger.error("错误信息为" + e);
         }
         // TODO 使用RabbitMQ发送消息进行日志处理
-//        rabbitMqSendService.sendMsg(MqConstant.LEIMINGTECH_ADMIN_OPERATION_LOG_QUEUE,
+//        rabbitMqSendService.sendMsg(MqConstant.WIULUS_ADMIN_OPERATION_LOG_QUEUE,
 //                JSON.toJSONString(log));
 
     }

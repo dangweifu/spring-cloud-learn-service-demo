@@ -9,7 +9,7 @@ import org.wiulus.spring.cloud.logs.environment.SDKSystemPropertiesApplicationLi
 @Configuration
 public class LogConfig {
 
-    @Value("${leimingtech.system.id}")
+    @Value("${wiulus.system.id}")
     private String systemId="1";
 
     @Bean

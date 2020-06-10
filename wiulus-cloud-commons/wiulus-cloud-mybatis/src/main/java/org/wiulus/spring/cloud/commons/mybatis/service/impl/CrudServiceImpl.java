@@ -1,7 +1,7 @@
 /**
  *
  * <p>
- * https://www.leimingtech.com
+ * https://www.wiulus.com
  * <p>
  * 版权所有，侵权必究！
  */
@@ -25,7 +25,7 @@ import java.util.Map;
 /**
  *  CRUD基础服务类
  *
- * @author Mark sunlightcs@gmail.com
+ * @author : WiuLuS
  */
 public abstract class CrudServiceImpl<M extends BaseMapper<T>, T, D> extends BaseServiceImpl<M, T> implements CrudService<T, D> {
 

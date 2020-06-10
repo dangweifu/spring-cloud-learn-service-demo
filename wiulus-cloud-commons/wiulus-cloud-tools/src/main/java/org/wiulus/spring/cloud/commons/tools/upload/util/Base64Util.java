@@ -11,7 +11,7 @@ import java.io.IOException;
  * 功能描述：
  * <base64文件转MultipartFile>
  *
- * @author 刘远杰
+ * @author WiuLuS
  * @version 7.0
  * @Date 2019/6/10 16:01
  **/
@@ -48,7 +48,7 @@ public class Base64Util {
      * 〈通过文件base64流判断文件等于多少字节〉
      *
      * @param fileStr base64文件字符串
-     * @author : 刘远杰
+     * @author : WiuLuS
      */
     public static long fileSize(String fileStr) {
         // 1.需要计算文件流大小，如头部的data:image/png;base64,到逗号结束内容去掉。
@@ -71,7 +71,7 @@ public class Base64Util {
      * 〈获取base64上传的文件格式〉
      *
      * @param fileStr base64文件字符串
-     * @author : 刘远杰
+     * @author : WiuLuS
      */
     public static String getFileType(String fileStr) {
         // 1.获得文件格式内容
@@ -85,7 +85,7 @@ public class Base64Util {
      * 〈base64字符串转byte[]〉
      *
      * @param base64 base64字符串
-     * @author : 刘远杰
+     * @author : WiuLuS
      */
     public static byte[] base642Byte(String base64) {
         return Base64.decodeBase64(base64);
@@ -96,7 +96,7 @@ public class Base64Util {
      * 〈byte[]转base64〉
      *
      * @param b byte数组
-     * @author : 刘远杰
+     * @author : WiuLuS
      */
     public static String byte2Base64(byte[] b) {
         return Base64.encodeBase64String(b);

@@ -17,6 +17,7 @@
         <module>wiulus-cloud-parent</module>
         <module>wiulus-cloud-member</module>
         <module>wiulus-cloud-base-service</module>
+        <module>wiulus-cloud-commons</module>
     </modules>
 
 

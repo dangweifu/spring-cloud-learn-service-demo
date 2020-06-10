@@ -13,10 +13,14 @@
 
 
     <dependencies>
-<!--        <dependency>-->
-<!--            <groupId>com.leimingtech</groupId>-->
-<!--            <artifactId>leimingtech-commons-tools</artifactId>-->
-<!--        </dependency>-->
+        <dependency>
+            <groupId>org.wiulus.one</groupId>
+            <artifactId>wiulus-cloud-tools</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.wiulus.one</groupId>
+            <artifactId>wiulus-cloud-logs</artifactId>
+        </dependency>
         <dependency>
             <groupId>io.springfox</groupId>
             <artifactId>springfox-swagger2</artifactId>

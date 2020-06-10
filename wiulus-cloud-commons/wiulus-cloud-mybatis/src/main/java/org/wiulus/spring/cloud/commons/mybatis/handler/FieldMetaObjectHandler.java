@@ -1,5 +1,5 @@
 /**
- * https://www.leimingtech.com
+ * https://www.wiulus.com
  * <p>
  * 版权所有，侵权必究！
  */
@@ -20,8 +20,8 @@ import java.util.Date;
 /**
  * 公共字段，自动填充值
  *
- * @author Mark sunlightcs@gmail.com
- * @since 1.0.0
+ * @author : WiuLuS
+ * @Version : 1.0
  */
 @Component
 public class FieldMetaObjectHandler implements MetaObjectHandler {
