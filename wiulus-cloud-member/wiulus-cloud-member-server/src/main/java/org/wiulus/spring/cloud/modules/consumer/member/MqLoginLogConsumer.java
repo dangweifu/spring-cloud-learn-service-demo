@@ -10,7 +10,7 @@
 //import org.springframework.amqp.core.Message;
 //import org.springframework.amqp.rabbit.annotation.RabbitHandler;
 //import org.springframework.amqp.rabbit.annotation.RabbitListener;
-//import javax.annotation.Resource;
+//import org.springframework.beans.factory.annotation.Autowired;
 //import org.springframework.beans.factory.annotation.Qualifier;
 //import org.springframework.stereotype.Component;
 //
@@ -22,13 +22,13 @@
 // * @Author: SWH ab4856812@163.com
 // * @Description : 登录日志
 // * @Date: 2019/7/17 22:00
-// * @Version: V1.0
+// * @Version : V1.0
 // */
 //@Slf4j
 //@Component
 //public class MqLoginLogConsumer {
 //
-//    @Resource
+//    @Autowired
 //    @Qualifier("memberLoginLogService")
 //    private MemberLoginLogService memberLoginLogService;
 //
@@ -36,7 +36,7 @@
 //     * @Author: SWH ab4856812@163.com
 //     * @Description : 增加H5登录日志
 //     * @Date: 2019/7/17 21:42
-//     * @Version: V1.0
+//     * @Version : V1.0
 //     */
 //    @RabbitHandler
 //    @RabbitListener(queues = MqConstant.LEIMINGTECH_USERLOGIN_QUEUE)

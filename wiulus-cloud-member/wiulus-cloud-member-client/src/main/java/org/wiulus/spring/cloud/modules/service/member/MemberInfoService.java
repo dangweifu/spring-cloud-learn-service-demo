@@ -73,7 +73,7 @@ public interface MemberInfoService {
      *
      * @param memberId:   会员ID
      * @param gradePoint: 会员等级积分（成长值）
-     * @date 2019/12/26 10:34
+     * @Date 2019/12/26 10:34
      * @author lixiangx@wiulus.com
      **/
     @PutMapping("point")

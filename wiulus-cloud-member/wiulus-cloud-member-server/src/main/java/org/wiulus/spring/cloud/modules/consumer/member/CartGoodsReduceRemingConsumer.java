@@ -1,62 +1,62 @@
-package org.wiulus.spring.cloud.modules.consumer.member;
-
-import com.alibaba.fastjson.JSON;
+//package org.wiulus.spring.cloud.modules.consumer.member;
+//
+//import com.alibaba.fastjson.JSON;
 //import org.wiulus.spring.cloud.dto.message.FindMessageTemplateDTO;
 //import org.wiulus.spring.cloud.dto.message.MessageTextDTO;
 //import org.wiulus.spring.cloud.enums.message.AliyunCodeEnum;
 //import org.wiulus.spring.cloud.enums.message.MessageEnum;
 //import org.wiulus.spring.cloud.modules.dto.cart.CartRemindDTO;
 //import org.wiulus.spring.cloud.modules.dto.member.MemberDTO;
-import org.wiulus.spring.cloud.modules.service.member.MemberService;
+//import org.wiulus.spring.cloud.modules.service.member.MemberService;
 //import org.wiulus.spring.cloud.mq.constant.MqConstant;
 //import org.wiulus.spring.cloud.service.SysSmsService;
 //import org.wiulus.spring.cloud.service.message.MessageTextService;
-import com.rabbitmq.client.Channel;
-import lombok.extern.slf4j.Slf4j;
-import org.springframework.amqp.core.Message;
-import org.springframework.amqp.rabbit.annotation.RabbitHandler;
-import org.springframework.amqp.rabbit.annotation.RabbitListener;
-import javax.annotation.Resource;
-import org.springframework.stereotype.Component;
-
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Set;
-import java.util.stream.Collectors;
-
-/**
- * 购物车商品降价通知
- *
- * @author chengqian
- * @version V1.0
- * @date2020-2-13 09：10
- **/
-@Slf4j
-@Component
-public class CartGoodsReduceRemingConsumer {
-
-//    @Resource
+//import com.rabbitmq.client.Channel;
+//import lombok.extern.slf4j.Slf4j;
+//import org.springframework.amqp.core.Message;
+//import org.springframework.amqp.rabbit.annotation.RabbitHandler;
+//import org.springframework.amqp.rabbit.annotation.RabbitListener;
+//import org.springframework.beans.factory.annotation.Autowired;
+//import org.springframework.stereotype.Component;
+//
+//import java.io.IOException;
+//import java.util.ArrayList;
+//import java.util.LinkedHashMap;
+//import java.util.List;
+//import java.util.Set;
+//import java.util.stream.Collectors;
+//
+///**
+// * 购物车商品降价通知
+// *
+// * @author chengqian
+// * @version V1.0
+// * @date2020-2-13 09：10
+// **/
+//@Slf4j
+//@Component
+//public class CartGoodsReduceRemingConsumer {
+//
+//    @Autowired
 //    private MessageTextService messageTextService;
 //
-//    @Resource
+//    @Autowired
 //    private SysSmsService sysSmsService;
-
-//    @Resource
-    private MemberService memberService;
-
-
-    /**
-     * 购物车商品降价通知
-     *
-     * @param channel
-     * @param message
-     * @throws IOException
-     */
+//
+//    @Autowired
+//    private MemberService memberService;
+//
+//
+//    /**
+//     * 购物车商品降价通知
+//     *
+//     * @param channel
+//     * @param message
+//     * @throws IOException
+//     */
 //    @RabbitHandler
 //    @RabbitListener(queues = MqConstant.LEIMINGTECH_GOODS_REDUCE_PRICE_REMIND)
-    public void cartGoodsReduceRemind(Channel channel, Message message) throws IOException {
+//    public void cartGoodsReduceRemind(Channel channel, Message message) throws IOException {
 //        String msgText = new String(message.getBody());
 //        log.info("购物车降价通知消息接收，内容为:{}", msgText);
 //        CartRemindDTO cartRemindDTO = JSON.parseObject(msgText, CartRemindDTO.class);
@@ -109,5 +109,5 @@ public class CartGoodsReduceRemingConsumer {
 //        channel.basicAck(message.getMessageProperties().
 //                getDeliveryTag(), false);
 //        log.info("购物车降价通知消息处理完毕，手动执行ACK!");
-    }
-}
+//    }
+//}

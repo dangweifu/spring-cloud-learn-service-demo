@@ -11,7 +11,7 @@ import com.alibaba.fastjson.JSON;
 import com.netflix.hystrix.exception.HystrixBadRequestException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import javax.annotation.Resource;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DuplicateKeyException;
 import org.springframework.http.HttpHeaders;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -37,9 +37,9 @@ import java.util.Map;
 @RestControllerAdvice
 public class CustomExceptionHandler {
     private static final Logger logger = LoggerFactory.getLogger(CustomExceptionHandler.class);
-//    @Resource
+//    @Autowired
 //    private ModuleConfig moduleConfig;
-//    @Resource
+//    @Autowired
 //    private RabbitMqSendService rabbitMqSendService;
 
     /**

@@ -9,7 +9,7 @@
 package org.wiulus.spring.cloud.commons.dynamic.datasource.config;
 
 import com.alibaba.druid.pool.DruidDataSource;
-import javax.annotation.Resource;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
@@ -30,7 +30,7 @@ import java.util.Map;
 @EnableConfigurationProperties(DynamicDataSourceProperties.class)
 public class DynamicDataSourceConfig {
 
-    @Resource
+    @Autowired
     private DynamicDataSourceProperties properties;
 
     @Bean

@@ -17,7 +17,7 @@ import com.baomidou.mybatisplus.extension.toolkit.SqlHelper;
 import org.apache.ibatis.binding.MapperMethod;
 import org.apache.ibatis.session.SqlSession;
 import org.mybatis.spring.SqlSessionUtils;
-import javax.annotation.Resource;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 import org.wiulus.spring.cloud.commons.mybatis.service.BaseService;
 import org.wiulus.spring.cloud.commons.mybatis.utils.EntityUtils;
@@ -25,6 +25,7 @@ import org.wiulus.spring.cloud.commons.tools.constant.Contants;
 import org.wiulus.spring.cloud.commons.tools.page.PageData;
 import org.wiulus.spring.cloud.commons.tools.utils.ConvertUtils;
 
+import javax.annotation.Resource;
 import java.io.Serializable;
 import java.util.Collection;
 import java.util.List;
@@ -37,7 +38,7 @@ import java.util.Map;
  * @Version : 1.0
  */
 public abstract class BaseServiceImpl<M extends BaseMapper<T>, T> implements BaseService<T> {
-    @Resource
+    @Autowired
     protected M baseDao;
 
     /**

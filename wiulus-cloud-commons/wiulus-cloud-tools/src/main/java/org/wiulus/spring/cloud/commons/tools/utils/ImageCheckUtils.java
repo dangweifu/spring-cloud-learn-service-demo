@@ -66,7 +66,7 @@ public class ImageCheckUtils {
      *
      * @param base64Str
      * @return
-     * @date 2019/8/6 17:13
+     * @Date 2019/8/6 17:13
      * @author WiuLuS
      **/
     public static Map<String, Object> isImage(String base64Str) {

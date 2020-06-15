@@ -57,7 +57,7 @@ public class SecurityUser {
      * 获取登陆用户名信息
      *
      * @return 用户名
-     * @date 2019/7/11 11:17
+     * @Date 2019/7/11 11:17
      * @author WiuLuS
      **/
     public static String getUserName() {
@@ -115,7 +115,7 @@ public class SecurityUser {
      * 获取Seller用户信息
      *
      * @return seller用户基础信息
-     * @date 2019/6/26 15:24
+     * @Date 2019/6/26 15:24
      * @author WiuLuS
      **/
     public static SellerDetail getSeller() {
@@ -132,7 +132,7 @@ public class SecurityUser {
      * 获取sellerId
      *
      * @return sellerId
-     * @date 2019/6/26 15:25
+     * @Date 2019/6/26 15:25
      * @author WiuLuS
      **/
     private static Long getSellerId() {

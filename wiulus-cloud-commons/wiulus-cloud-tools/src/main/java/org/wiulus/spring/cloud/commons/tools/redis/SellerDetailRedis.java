@@ -8,7 +8,7 @@ package org.wiulus.spring.cloud.commons.tools.redis;
 
 import cn.hutool.core.bean.BeanUtil;
 import cn.hutool.core.map.MapUtil;
-import javax.annotation.Resource;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.wiulus.spring.cloud.commons.tools.security.enums.UserKillEnum;
 import org.wiulus.spring.cloud.commons.tools.security.user.SellerDetail;
@@ -24,7 +24,7 @@ import java.util.Map;
 @Component
 public class SellerDetailRedis {
 
-    @Resource
+    @Autowired
     private RedisUtils redisUtils;
 
     /**
@@ -33,7 +33,7 @@ public class SellerDetailRedis {
      * @param sellerDetail: seller用户信息
      * @param expire:       用户redis时长
      * @return
-     * @date 2019/6/26 14:58
+     * @Date 2019/6/26 14:58
      * @author WiuLuS
      **/
     public void set(SellerDetail sellerDetail, long expire) {
@@ -56,7 +56,7 @@ public class SellerDetailRedis {
      *
      * @param sellerId: sellerID
      * @return 返回Seller用户
-     * @date 2019/6/26 15:05
+     * @Date 2019/6/26 15:05
      * @author WiuLuS
      **/
     public SellerDetail get(Long sellerId) {
@@ -77,7 +77,7 @@ public class SellerDetailRedis {
      * seller退出操作
      *
      * @param sellerId: seller用户Id
-     * @date 2019/6/26 15:07
+     * @Date 2019/6/26 15:07
      * @author WiuLuS
      **/
     public void logout(Long sellerId) {

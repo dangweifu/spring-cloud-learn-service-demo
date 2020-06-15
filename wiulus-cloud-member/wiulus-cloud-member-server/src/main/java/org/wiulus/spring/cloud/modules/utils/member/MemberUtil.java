@@ -9,7 +9,7 @@
 ////import org.wiulus.spring.cloud.service.setting.SettingService;
 //import lombok.extern.slf4j.Slf4j;
 //import org.apache.commons.lang3.StringUtils;
-//import javax.annotation.Resource;
+//import org.springframework.beans.factory.annotation.Autowired;
 //import org.springframework.http.HttpHeaders;
 //import org.springframework.stereotype.Component;
 //
@@ -38,7 +38,7 @@
 //
 ////    private static SettingService staticsettingService;
 ////
-////    @Resource
+////    @Autowired
 ////    private SettingService settingService;
 //
 //    /**

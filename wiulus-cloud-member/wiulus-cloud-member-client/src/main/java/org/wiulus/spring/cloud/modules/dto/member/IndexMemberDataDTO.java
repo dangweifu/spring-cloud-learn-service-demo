@@ -6,9 +6,9 @@ import java.io.Serializable;
 
 /**
  * @author xuzhch
- * @className IndexMemberDataDTO
- * @description 首页用户数据
- * @date 2020/3/16/016
+ * IndexMemberDataDTO
+ * @Description 首页用户数据
+ * @Date 2020/3/16/016
  */
 @Data
 public class IndexMemberDataDTO implements Serializable {

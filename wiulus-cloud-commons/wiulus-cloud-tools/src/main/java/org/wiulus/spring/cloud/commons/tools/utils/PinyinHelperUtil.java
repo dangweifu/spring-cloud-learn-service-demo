@@ -36,7 +36,7 @@ public class PinyinHelperUtil {
      *
      * @param str: 字符
      * @return 小写英文全拼
-     * @date 2019/12/16 10:00
+     * @Date 2019/12/16 10:00
      * @author m13886933623@163.com
      **/
     public static String getPinYinAllChar(String str) {
@@ -59,7 +59,7 @@ public class PinyinHelperUtil {
      *
      * @param str: 字符
      * @return 字符首字母
-     * @date 2019/12/16 10:00
+     * @Date 2019/12/16 10:00
      * @author m13886933623@163.com
      **/
     public static String getPinYinAllHeadChar(String str) {

@@ -357,7 +357,7 @@ public class RedisUtils {
      *
      * @param key: Reids key
      * @return 操作后的结果
-     * @date 2020/3/9 13:53
+     * @Date 2020/3/9 13:53
      * @author m13886933623@163.com
      **/
     public Long decrement(String key) throws Exception {
@@ -374,7 +374,7 @@ public class RedisUtils {
      *
      * @param key: Reids key
      * @return 操作后的结果
-     * @date 2020/3/9 13:53
+     * @Date 2020/3/9 13:53
      * @author m13886933623@163.com
      **/
     public Long increment(String key) throws Exception {

@@ -22,7 +22,7 @@ import org.wiulus.spring.cloud.modules.redis.member.CaptchaRedis;
 //import org.wiulus.spring.cloud.service.message.MessageTextService;
 //import org.wiulus.spring.cloud.service.message.template.MessageTemplateService;
 import lombok.extern.slf4j.Slf4j;
-import javax.annotation.Resource;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.awt.image.BufferedImage;
@@ -40,19 +40,19 @@ import java.util.Random;
 @RestController("captchaService")
 @RequestMapping("captcha")
 public class CaptchaServiceImpl implements CaptchaService {
-    @Resource
+    @Autowired
     private Producer producer;
-    @Resource
+    @Autowired
     private CaptchaRedis captchaRedis;
-    @Resource
+    @Autowired
     private RedisUtils redisUtils;
-//    @Resource
+//    @Autowired
 //    private SysSmsService sysSmsService;
-//    @Resource
+//    @Autowired
 //    private SysMailTemplateService sysMailTemplateService;
-//    @Resource
+//    @Autowired
 //    private MessageTemplateService messageTemplateService;
-//    @Resource
+//    @Autowired
 //    private MessageTextService messageTextService;
     /**
      * 注册验证码,五分钟

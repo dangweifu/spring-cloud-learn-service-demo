@@ -107,7 +107,7 @@ public class RedisKeys {
      *
      * @param id: 用户ID
      * @return : key
-     * @date 2019/6/26 14:47
+     * @Date 2019/6/26 14:47
      * @author WiuLuS
      **/
     public static String getSecuritySellerKey(Long id) {
@@ -119,7 +119,7 @@ public class RedisKeys {
      *
      * @param sellerId: seller用户ID
      * @return : 返回seller菜单Key
-     * @date 2019/6/26 15:01
+     * @Date 2019/6/26 15:01
      * @author WiuLuS
      **/
     public static String getSellerMenuNavKey(Long sellerId) {
@@ -131,7 +131,7 @@ public class RedisKeys {
      *
      * @param sellerId: seller用户ID
      * @return : 返回seller权限Key
-     * @date 2019/6/26 15:02
+     * @Date 2019/6/26 15:02
      * @author WiuLuS
      **/
 
@@ -191,7 +191,7 @@ public class RedisKeys {
     /**
      * H5 获取热词列表
      *
-     * @date 2019/12/18 9:58
+     * @Date 2019/12/18 9:58
      * @author m13886933623@163.com
      **/
     public static String getFrontHotWords() {

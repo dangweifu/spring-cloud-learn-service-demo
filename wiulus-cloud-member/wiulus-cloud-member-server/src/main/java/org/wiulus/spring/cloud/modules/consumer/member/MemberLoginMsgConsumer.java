@@ -12,7 +12,7 @@
 //import org.springframework.beans.factory.annotation.Qualifier;
 //import org.springframework.stereotype.Component;
 //
-//import javax.annotation.Resource;
+//import org.springframework.beans.factory.annotation.Autowired;
 //import java.io.IOException;
 //import java.util.Date;
 //import java.util.Map;
@@ -22,13 +22,13 @@
 // *
 // * @author lixiang
 // * @version V1.0
-// * @date 2019/11/11 10:12
+// * @Date 2019/11/11 10:12
 // **/
 //@Slf4j
 //@Component
 //public class MemberLoginMsgConsumer {
 //
-//    @Resource
+//    @Autowired
 //    @Qualifier("memberService")
 //    private MemberService memberService;
 //

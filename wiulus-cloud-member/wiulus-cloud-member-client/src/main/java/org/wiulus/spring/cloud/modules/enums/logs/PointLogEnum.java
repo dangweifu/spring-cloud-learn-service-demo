@@ -5,7 +5,7 @@ package org.wiulus.spring.cloud.modules.enums.logs;
  *
  * @author lixiang
  * @version V1.0
- * @date 2019/12/24 14:47
+ * @Date 2019/12/24 14:47
  **/
 public enum PointLogEnum {
 

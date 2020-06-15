@@ -16,7 +16,7 @@ import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.serializer.StringRedisSerializer;
 import org.wiulus.spring.cloud.commons.tools.redis.serializer.JsonRedisSerializer;
 
-import javax.annotation.Resource;
+import org.springframework.beans.factory.annotation.Autowired;
 
 /**
  * Redis配置
@@ -27,7 +27,7 @@ import javax.annotation.Resource;
 @Configuration
 @ConditionalOnClass(RedisTemplate.class)
 public class RedisConfig {
-    @Resource
+    @Autowired
     private RedisConnectionFactory factory;
 
     @Bean

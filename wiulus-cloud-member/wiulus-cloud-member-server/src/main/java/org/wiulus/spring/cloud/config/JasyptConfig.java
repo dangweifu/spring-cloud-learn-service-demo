@@ -12,7 +12,7 @@ import org.springframework.context.annotation.Configuration;
  *
  * @author lixiang
  * @version V1.0
- * @date 2019/8/1 9:47
+ * @Date 2019/8/1 9:47
  **/
 @Configuration
 public class JasyptConfig {

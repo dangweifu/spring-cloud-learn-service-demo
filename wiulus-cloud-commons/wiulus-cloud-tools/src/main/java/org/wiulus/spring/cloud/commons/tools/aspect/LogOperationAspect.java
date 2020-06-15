@@ -15,7 +15,7 @@ import org.aspectj.lang.annotation.Pointcut;
 import org.aspectj.lang.reflect.MethodSignature;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import javax.annotation.Resource;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.stereotype.Component;
 import org.wiulus.spring.cloud.commons.tools.annotation.LogOperation;
@@ -44,10 +44,10 @@ public class LogOperationAspect {
 
     private static Logger logger = LoggerFactory.getLogger(LogOperationAspect.class);
 
-//    @Resource
+//    @Autowired
 //    private ModuleConfig moduleConfig;
 
-//    @Resource
+//    @Autowired
 //    private RabbitMqSendService rabbitMqSendService;
 
     @Pointcut("@annotation(org.wiulus.spring.cloud.commons.tools.annotation.LogOperation)")

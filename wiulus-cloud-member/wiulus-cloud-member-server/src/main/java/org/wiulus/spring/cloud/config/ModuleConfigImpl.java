@@ -14,7 +14,7 @@ import org.springframework.stereotype.Service;
 /**
  * @author : WiuLuS
  * @version 1.0
- * @date 2020-06-10 13:57 PM
+ * @Date 2020-06-10 13:57 PM
  */
 @Service
 public class ModuleConfigImpl implements ModuleConfig {

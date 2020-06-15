@@ -1,10 +1,10 @@
 package org.wiulus.spring.cloud.modules.enums.member;
 
 /**
- * @Author: LX 17839193044@162.com
+ * @author: WiuLuS m13886933623@163.com
  * @Description : 会员地址枚举类
  * @Date: 16:53 2019/6/14
- * @Version: V1.0
+ * @Version : V1.0
  */
 public enum MemberAddressEnum {
 

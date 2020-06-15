@@ -13,7 +13,7 @@
 //import org.springframework.amqp.core.Message;
 //import org.springframework.amqp.rabbit.annotation.RabbitHandler;
 //import org.springframework.amqp.rabbit.annotation.RabbitListener;
-//import javax.annotation.Resource;
+//import org.springframework.beans.factory.annotation.Autowired;
 //import org.springframework.beans.factory.annotation.Qualifier;
 //import org.springframework.stereotype.Component;
 //
@@ -25,17 +25,17 @@
 // *
 // * @author lixiang
 // * @version V1.0
-// * @date 2019/12/24 11:08
+// * @Date 2019/12/24 11:08
 // **/
 //@Slf4j
 //@Component
 //public class PointLogConsumer {
 //
-//    @Resource
+//    @Autowired
 //    @Qualifier("pointLogService")
 //    private PointLogService pointLogService;
 //
-//    @Resource
+//    @Autowired
 //    @Qualifier("memberInfoService")
 //    private MemberInfoService memberInfoService;
 //

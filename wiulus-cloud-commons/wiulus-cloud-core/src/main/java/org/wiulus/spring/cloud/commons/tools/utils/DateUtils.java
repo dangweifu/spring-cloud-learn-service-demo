@@ -325,7 +325,7 @@ public class DateUtils implements Converter<String, Date> {
      * @param time:   时间戳
      * @param format: 格式
      * @return 格式化的时间
-     * @date 2019/12/26 9:49
+     * @Date 2019/12/26 9:49
      * @author m13886933623@163.com
      **/
     public static Date longToDate(long time, String format) {
@@ -396,7 +396,7 @@ public class DateUtils implements Converter<String, Date> {
      * @param fromDate: 开始时间
      * @param toDate:   结束时间
      * @return 相差月数
-     * @date 2019/12/25 16:11
+     * @Date 2019/12/25 16:11
      * @author m13886933623@163.com
      **/
     public static int monthCompare(Date fromDate, Date toDate) {
@@ -424,7 +424,7 @@ public class DateUtils implements Converter<String, Date> {
      * 获取当年的第一天
      *
      * @return 当年的第一天
-     * @date 2019/12/25 16:14
+     * @Date 2019/12/25 16:14
      * @author m13886933623@163.com
      **/
     public static Date getCurrYearFirst() {
@@ -442,7 +442,7 @@ public class DateUtils implements Converter<String, Date> {
      * 获取当年最后一天
      *
      * @return 当年最后一天
-     * @date 2019/12/25 16:16
+     * @Date 2019/12/25 16:16
      * @author m13886933623@163.com
      **/
     public static Date getCurrYearLast() {
@@ -490,7 +490,7 @@ public class DateUtils implements Converter<String, Date> {
      *
      * @param date 被减时间 type[1：减一天，2：减7天，3：减15天，4：减30天]
      * @return
-     * @date 2020/3/17/017 14:49
+     * @Date 2020/3/17/017 14:49
      * @author xuzhch
      **/
     public static Date getFixedDate(Date date, Integer type) {

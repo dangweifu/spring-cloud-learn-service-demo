@@ -273,7 +273,7 @@ public class VerifyImageUtil {
      *
      * @param sliderImage: 图片
      * @return 增加边框后的图片
-     * @date 2019/11/12 10:46
+     * @Date 2019/11/12 10:46
      * @author m13886933623@163.com
      **/
     private static BufferedImage imagesFrameSlider(BufferedImage sliderImage) {

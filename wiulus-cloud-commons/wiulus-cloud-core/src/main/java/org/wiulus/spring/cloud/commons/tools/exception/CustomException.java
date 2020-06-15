@@ -7,7 +7,7 @@ import org.wiulus.spring.cloud.commons.tools.utils.MessageUtils;
  * @author : WiuLuS
  * @version : v1.0 06.08.2020
  * @discription :
- * @date : 2020-06-08 15:59:56
+ * @Date : 2020-06-08 15:59:56
  * @email : m13886933623@163.com
  */
 public class CustomException extends RuntimeException {

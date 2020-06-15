@@ -10,7 +10,7 @@ import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.module.SimpleModule;
 import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
-import javax.annotation.Resource;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.converter.ByteArrayHttpMessageConverter;
@@ -38,10 +38,10 @@ import java.util.TimeZone;
  */
 @Configuration
 public class WebMvcConfig implements WebMvcConfigurer {
-    @Resource
+    @Autowired
     private UserDetailHandlerMethodArgumentResolver userDetailHandlerMethodArgumentResolver;
 
-    @Resource
+    @Autowired
     private SellerDetailHandlerMethodArgumentResolver sellerDetailHandlerMethodArgumentResolver;
 
     @Override

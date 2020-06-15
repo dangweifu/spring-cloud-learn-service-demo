@@ -4,11 +4,15 @@ package org.wiulus.spring.cloud.commons.tools.constant;
  * @author : WiuLuS
  * @version : v1.0 06.08.2020
  * @discription : 微服务名称常量
- * @date : 2020-06-08 15:58:33
+ * @Date : 2020-06-08 15:58:33
  * @email : m13886933623@163.com
  */
 public interface ServiceConstant {
 
+    /**
+     * demo 服务
+     */
+    String WIULUS_DEMO_SERVER = "wiulus-demo-server" ;
     /**
      * 系统服务
      */

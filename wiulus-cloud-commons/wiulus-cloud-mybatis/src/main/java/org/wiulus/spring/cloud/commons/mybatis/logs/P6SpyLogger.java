@@ -11,7 +11,7 @@ import lombok.extern.slf4j.Slf4j;
  *
  * @author WiuLuS
  * @version V1.0
- * @date 2020/1/16 10:11
+ * @Date 2020/1/16 10:11
  **/
 @Slf4j
 public class P6SpyLogger extends FormattedLogger {
@@ -35,7 +35,7 @@ public class P6SpyLogger extends FormattedLogger {
      * @param prepared:     预编译SQL
      * @param sql:          最终执行的SQL
      * @param url:          数据库连接地址
-     * @date 2020/1/16 9:52
+     * @Date 2020/1/16 9:52
      * @author m13886933623@163.com
      **/
     @Override
@@ -62,7 +62,7 @@ public class P6SpyLogger extends FormattedLogger {
      *
      * @param category 日志类别
      * @return 是否开启
-     * @date 2020/1/16 10:42
+     * @Date 2020/1/16 10:42
      * @author m13886933623@163.com
      **/
     @Override

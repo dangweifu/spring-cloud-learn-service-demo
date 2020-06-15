@@ -4,7 +4,7 @@ package org.wiulus.spring.cloud.commons.tools.constant;
  * @author : WiuLuS
  * @version : v1.0 06.08.2020
  * @discription : 正则表达式常量
- * @date : 2020-06-08 15:57:50
+ * @Date : 2020-06-08 15:57:50
  * @email : m13886933623@163.com
  */
 public interface RegexConstant {

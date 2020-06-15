@@ -8,7 +8,7 @@ package org.wiulus.spring.cloud.modules.redis.member;
 
 import org.wiulus.spring.cloud.commons.tools.redis.RedisKeys;
 import org.wiulus.spring.cloud.commons.tools.redis.RedisUtils;
-import javax.annotation.Resource;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 /**
@@ -23,7 +23,7 @@ public class CaptchaRedis {
      * 验证码5分钟过期
      */
     private final static long EXPIRE = 60 * 5L;
-    @Resource
+    @Autowired
     private RedisUtils redisUtils;
 
     public void set(String uuid, String captcha) {

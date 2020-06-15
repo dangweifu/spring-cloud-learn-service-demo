@@ -33,7 +33,7 @@ public interface MemberService {
      *
      * @param params
      * @return
-     * @date 2020/1/13 21:03
+     * @Date 2020/1/13 21:03
      * @author weixianchun
      **/
     @GetMapping("export")
@@ -221,7 +221,7 @@ public interface MemberService {
     /**
      * member基础信息修改
      *
-     * @date 2019/11/11 10:25
+     * @Date 2019/11/11 10:25
      * @author lixiangx@wiulus.com
      **/
     @PutMapping("/base")

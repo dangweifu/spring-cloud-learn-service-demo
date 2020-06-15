@@ -1,8 +1,8 @@
 package org.wiulus.spring.cloud.modules.service.member;
 
 import cn.hutool.core.util.ObjectUtil;
-import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.JSONObject;
+//import com.alibaba.fastjson.JSON;
+//import com.alibaba.fastjson.JSONObject;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import org.wiulus.spring.cloud.commons.mybatis.service.impl.BaseServiceImpl;
@@ -30,8 +30,8 @@ import org.wiulus.spring.cloud.modules.dto.address.MemberAddressDTO;
 //import org.wiulus.spring.cloud.modules.dto.coupons.FrontMyCouponsPageDTO;
 import org.wiulus.spring.cloud.modules.dto.grade.MemberGradeDTO;
 import org.wiulus.spring.cloud.modules.dto.grade.MemberGradeSaveDTO;
-import org.wiulus.spring.cloud.modules.dto.log.point.PointLogDTO;
-import org.wiulus.spring.cloud.modules.dto.log.point.PointLogPackDTO;
+//import org.wiulus.spring.cloud.modules.dto.log.point.PointLogDTO;
+//import org.wiulus.spring.cloud.modules.dto.log.point.PointLogPackDTO;
 import org.wiulus.spring.cloud.modules.dto.member.*;
 //import org.wiulus.spring.cloud.modules.dto.order.LastestOrderLogisticsDTO;
 //import org.wiulus.spring.cloud.modules.dto.order.MemberOrderCountDTO;
@@ -43,13 +43,13 @@ import org.wiulus.spring.cloud.modules.enums.logs.PointLogEnum;
 import org.wiulus.spring.cloud.modules.enums.member.LoginEnum;
 import org.wiulus.spring.cloud.modules.enums.member.MemberEnum;
 import org.wiulus.spring.cloud.modules.enums.member.MemberErrorEnum;
-import org.wiulus.spring.cloud.modules.service.address.MemberAddressService;
+//import org.wiulus.spring.cloud.modules.service.address.MemberAddressService;
 //import org.wiulus.spring.cloud.modules.service.browse.GoodsBrowseService;
 //import org.wiulus.spring.cloud.modules.service.coupons.CouponsActivitySearchService;
 //import org.wiulus.spring.cloud.modules.service.favorites.FavoritesService;
-import org.wiulus.spring.cloud.modules.service.grade.MemberGradeService;
-import org.wiulus.spring.cloud.modules.service.log.MemberLoginLogService;
-import org.wiulus.spring.cloud.modules.service.log.point.PointLogService;
+//import org.wiulus.spring.cloud.modules.service.grade.MemberGradeService;
+//import org.wiulus.spring.cloud.modules.service.log.MemberLoginLogService;
+//import org.wiulus.spring.cloud.modules.service.log.point.PointLogService;
 //import org.wiulus.spring.cloud.modules.service.order.OrderGoodsService;
 //import org.wiulus.spring.cloud.modules.service.order.OrderLogisticsLogService;
 //import org.wiulus.spring.cloud.modules.service.order.OrderService;
@@ -64,10 +64,10 @@ import org.wiulus.spring.cloud.modules.vo.member.MemberVoDTO;
 //import org.wiulus.spring.cloud.service.message.MessageTextService;
 //import org.wiulus.spring.cloud.service.setting.PointSettingService;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.commons.collections4.CollectionUtils;
+//import org.apache.commons.collections4.CollectionUtils;
 import org.apache.commons.lang3.StringUtils;
-import javax.annotation.Resource;
-import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Autowired;
+//import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.cglib.beans.BeanCopier;
 import org.springframework.web.bind.annotation.*;
 
@@ -88,46 +88,48 @@ public class MemberServiceImpl extends BaseServiceImpl<MemberDao, MemberEntity> 
 //    private static MonitorLogger mlogger =
 //            MonitorLoggerFactory.getMonitorLogger(MemberServiceImpl.class);
 
-    //用户详情dao
-//    @Resource
+    /**
+     * 用户详情dao
+     */
+    @Autowired
     private MemberInfoDao memberInfoDao;
-//    @Resource
+//    @Autowired
     private RedisUtils redisUtils;
-//    @Resource
+//    @Autowired
 //    private RabbitMqSendService rabbitMqSendService;
 //    @Qualifier("memberLoginLogService")
-//    @Resource
-    private MemberLoginLogService memberLoginLogService;
-//    @Resource
+//    @Autowired
+//    private MemberLoginLogService memberLoginLogService;
+//    @Autowired
 //    @Qualifier("memberGradeService")
-    private MemberGradeService memberGradeService;
-//    @Resource
+//    private MemberGradeService memberGradeService;
+//    @Autowired
 //    @Qualifier("memberInfoService")
     private MemberInfoService memberInfoService;
-//    @Resource
+//    @Autowired
 //    @Qualifier("memberAddressService")
-    private MemberAddressService memberAddressService;
-
-//    @Resource
+//    private MemberAddressService memberAddressService;
+//
+//    @Autowired
 //    private MessageReceiverService messageReceiverService;
 //
-//    @Resource
+//    @Autowired
 //    private OrderService orderService;
-//    @Resource
+//    @Autowired
 //    private GoodsBrowseService goodsBrowseService;
-//    @Resource
+//    @Autowired
 //    private FavoritesService favoritesService;
-//    @Resource
+//    @Autowired
 //    private OrderLogisticsLogService orderLogisticsLogService;
-//    @Resource
+//    @Autowired
 //    private OrderGoodsService orderGoodsService;
-//    @Resource
+//    @Autowired
 //    private MessageTextService messageTextService;
-//    @Resource
+//    @Autowired
 //    private PointSettingService pointSettingService;
-//    @Resource
-    private PointLogService pointLogService;
-//    @Resource
+//    @Autowired
+//    private PointLogService pointLogService;
+//    @Autowired
 //    private CouponsActivitySearchService couponsActivitySearchService;
 
     /**
@@ -139,30 +141,31 @@ public class MemberServiceImpl extends BaseServiceImpl<MemberDao, MemberEntity> 
     @Override
     @GetMapping("page")
     public PageData<MemberListDTO> page(@RequestParam Map<String, Object> params) {
-        String gradeId = (String) params.get("gradeId");
-        if (StringUtils.isNotBlank(gradeId)) {
-            MemberGradeSaveDTO gradeSaveDTO = memberGradeService.getMember(Long.valueOf(gradeId));
-            params.put("min", gradeSaveDTO.getIntegration());
-            params.put("max", gradeSaveDTO.getMaxIntegration());
-        }
-
-        //分页
-        IPage<MemberEntity> page = getPage(params, "m.create_date", false);
-        //查询
-        List<MemberVo> list = baseDao.getPage(page, params);
-        List<MemberListDTO> memberVoDTOList = new ArrayList<>();
-        for (MemberVo memberVo : list) {
-            MemberListDTO memberListDTO = ConvertUtils.sourceToTarget(memberVo, MemberListDTO.class);
-            MemberGradeDTO memberGradeDTO = memberGradeService.selectByMemberId(memberVo.getMemberInfoEntity().getGradePoint());
-            if (memberGradeDTO == null) {
-                memberListDTO.setGradeName("暂无等级");
-            } else {
-                memberListDTO.setGradeName(memberGradeDTO.getGradeName());
-            }
-
-            memberVoDTOList.add(memberListDTO);
-        }
-        return getPageData(memberVoDTOList, page.getTotal(), MemberListDTO.class);
+//        String gradeId = (String) params.get("gradeId");
+//        if (StringUtils.isNotBlank(gradeId)) {
+//            MemberGradeSaveDTO gradeSaveDTO = memberGradeService.getMember(Long.valueOf(gradeId));
+//            params.put("min", gradeSaveDTO.getIntegration());
+//            params.put("max", gradeSaveDTO.getMaxIntegration());
+//        }
+//
+//        //分页
+//        IPage<MemberEntity> page = getPage(params, "m.create_date", false);
+//        //查询
+//        List<MemberVo> list = baseDao.getPage(page, params);
+//        List<MemberListDTO> memberVoDTOList = new ArrayList<>();
+//        for (MemberVo memberVo : list) {
+//            MemberListDTO memberListDTO = ConvertUtils.sourceToTarget(memberVo, MemberListDTO.class);
+//            MemberGradeDTO memberGradeDTO = memberGradeService.selectByMemberId(memberVo.getMemberInfoEntity().getGradePoint());
+//            if (memberGradeDTO == null) {
+//                memberListDTO.setGradeName("暂无等级");
+//            } else {
+//                memberListDTO.setGradeName(memberGradeDTO.getGradeName());
+//            }
+//
+//            memberVoDTOList.add(memberListDTO);
+//        }
+//        return getPageData(memberVoDTOList, page.getTotal(), MemberListDTO.class);
+        return null ;
     }
 
     /**
@@ -170,7 +173,7 @@ public class MemberServiceImpl extends BaseServiceImpl<MemberDao, MemberEntity> 
      * <导出查询>
      *
      * @param params
-     * @date 2020/1/13 21:03
+     * @Date 2020/1/13 21:03
      * @author weixianchun
      **/
     @GetMapping("export")
@@ -223,10 +226,10 @@ public class MemberServiceImpl extends BaseServiceImpl<MemberDao, MemberEntity> 
         //todo 逻辑待改
         MemberVo memberVo = baseDao.selectMemberById(id);
 
-        if (null != memberVo.getMemberInfoEntity().getGradePoint()) {
-            MemberGradeDTO memberGradeDTO = memberGradeService.selectByMemberId(memberVo.getMemberInfoEntity().getGradePoint());
-            memberVo.getMemberInfoEntity().setGradeName(memberGradeDTO.getGradeName() == null ? "" : memberGradeDTO.getGradeName());
-        }
+//        if (null != memberVo.getMemberInfoEntity().getGradePoint()) {
+//            MemberGradeDTO memberGradeDTO = memberGradeService.selectByMemberId(memberVo.getMemberInfoEntity().getGradePoint());
+//            memberVo.getMemberInfoEntity().setGradeName(memberGradeDTO.getGradeName() == null ? "" : memberGradeDTO.getGradeName());
+//        }
 
         MemberVoDTO memberVoDTO = ConvertUtils.sourceToTarget(memberVo, MemberVoDTO.class);
         MemberInfoDTO memberInfoDTO = ConvertUtils.sourceToTarget(memberVo.getMemberInfoEntity(), MemberInfoDTO.class);
@@ -654,11 +657,11 @@ public class MemberServiceImpl extends BaseServiceImpl<MemberDao, MemberEntity> 
         return res;
     }
 
-    public static void main(String[] args) {
-
-        String encode = PasswordUtils.encode("ugzbxRe7");
-        System.out.println(encode);
-    }
+//    public static void main(String[] args) {
+//
+//        String encode = PasswordUtils.encode("ugzbxRe7");
+//        System.out.println(encode);
+//    }
 
     /**
      * 修改用户状态
@@ -705,10 +708,10 @@ public class MemberServiceImpl extends BaseServiceImpl<MemberDao, MemberEntity> 
         BeanCopier.create(MemberVoDTO.class, MemberPersonCenterDTO.class, false)
                 .copy(memberVoDTO, memberPersonCenterDTO, null);
 
-        MemberAddressDTO memberAddressDTO = memberAddressService.findDefalutAddress(id);
-        if (null != memberAddressDTO) {
-            memberPersonCenterDTO.setAreaInfo(memberAddressDTO.getAreaInfo());
-        }
+//        MemberAddressDTO memberAddressDTO = memberAddressService.findDefalutAddress(id);
+//        if (null != memberAddressDTO) {
+//            memberPersonCenterDTO.setAreaInfo(memberAddressDTO.getAreaInfo());
+//        }
         if (null != memberVoDTO.getMemberBirthday()) {
             String date = DateUtils.format(memberVoDTO.getMemberBirthday());
             memberPersonCenterDTO.setMemberBirthday(date);
@@ -806,7 +809,7 @@ public class MemberServiceImpl extends BaseServiceImpl<MemberDao, MemberEntity> 
     /**
      * member基础信息修改
      *
-     * @date 2019/11/11 10:25
+     * @Date 2019/11/11 10:25
      * @author lixiangx@wiulus.com
      **/
     @Override

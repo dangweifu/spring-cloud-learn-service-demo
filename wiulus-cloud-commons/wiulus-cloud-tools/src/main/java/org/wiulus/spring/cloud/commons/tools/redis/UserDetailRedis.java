@@ -8,7 +8,7 @@ package org.wiulus.spring.cloud.commons.tools.redis;
 
 import cn.hutool.core.bean.BeanUtil;
 import cn.hutool.core.map.MapUtil;
-import javax.annotation.Resource;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.wiulus.spring.cloud.commons.tools.security.enums.UserKillEnum;
 import org.wiulus.spring.cloud.commons.tools.security.user.UserDetail;
@@ -23,7 +23,7 @@ import java.util.Map;
  */
 @Component
 public class UserDetailRedis {
-    @Resource
+    @Autowired
     private RedisUtils redisUtils;
 
     public void set(UserDetail user, long expire) {

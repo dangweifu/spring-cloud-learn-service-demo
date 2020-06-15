@@ -12,7 +12,7 @@ import static java.lang.String.format;
  * @author : WiuLuS
  * @version : v1.0 06.08.2020
  * @discription : 对象 Copy
- * @date : 2020-06-08 18:08:54
+ * @Date : 2020-06-08 18:08:54
  * @email : m13886933623@163.com
  */
 public class BeanCopierUtils {
