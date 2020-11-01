@@ -62,4 +62,8 @@ public class FileUtil {
     }
 
 
+    public static void main(String[] args) {
+        //TODO : 测试工具类
+    }
+
 }
