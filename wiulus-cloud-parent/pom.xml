@@ -38,7 +38,7 @@
         <bcprov.version>1.60</bcprov.version>
         <xxl.version>2.0.2</xxl.version>
         <hutool.version>4.5.10</hutool.version>
-        <elasticsearch.version>7.4.0</elasticsearch.version>
+        <elasticsearch.version>7.11.2</elasticsearch.version>
         <jasypt.version>3.0.2</jasypt.version>
         <commons.lang.version>3.7</commons.lang.version>
         <commons.collections4.version>4.1</commons.collections4.version>
